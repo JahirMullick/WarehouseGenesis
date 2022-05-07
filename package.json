@@ -1,0 +1,23 @@
+{
+  "name": "warehousegenesis",
+  "version": "1.0.0",
+  "description": "This is our final project",
+  "main": "/operations/index.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JahirMullick/WarehouseGenesis.git"
+  },
+  "author": "MD Jahir Mullick",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JahirMullick/WarehouseGenesis/issues"
+  },
+  "homepage": "https://github.com/JahirMullick/WarehouseGenesis#readme",
+  "dependencies": {
+    "electron": "^18.2.0"
+  }
+}
