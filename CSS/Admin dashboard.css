@@ -1,6 +1,5 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap'); */
+
 * {
     margin: 0;
     padding: 0;
@@ -14,6 +13,8 @@
     --grey: #f5f5f5;
     --black1: #222;
     --black2: #999;
+    --sky: #0AA1DD;
+    --purple: #4D4C7D;
 }
 
 body {
@@ -36,8 +37,7 @@ body {
     overflow: hidden;
 }
 
-.navigation.active
-{
+.navigation.active {
     width: 80px;
 }
 
@@ -62,8 +62,19 @@ body {
 }
 
 .navigation ul li:nth-child(1) {
-    margin-bottom: 40px;
+    
+    margin-bottom: 20px;
+    margin-left: 97px;
     pointer-events: none;
+    transition: 0.5s;
+}
+
+.navigation.active ul li:nth-child(1) {
+    margin-bottom: 40px;
+    margin-left: -1px;
+    padding-top: 10px;
+    pointer-events: none;
+    transition: 0.5s;
 }
 
 .navigation ul li a {
@@ -88,6 +99,7 @@ body {
     line-height: 70px;
     text-align: center;
 }
+
 .navigation ul li a .mainLogo {
     position: relative;
     display: block;
@@ -100,7 +112,6 @@ body {
 .navigation ul li a .icon ion-icon {
     font-size: 1.60em;
 }
-
 
 
 .navigation ul li a .title {
@@ -144,7 +155,7 @@ body {
 }
 
 /* main */
-.main{
+.main {
     position: absolute;
     width: calc(100% - 300px);
     left: 300px;
@@ -153,97 +164,127 @@ body {
     transition: 0.5s;
 }
 
-.main.active
-{
+.main.active {
     width: calc(100% - 80px);
     left: 80px;
 }
 
-.topbar{
+.topbar {
+    
     width: 100%;
     height: 60px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 0 10px;
 }
 
-.toggle
-{
-    position: relative;
+/* Toggle menu */
+.toggle {
+
+    position: absolute;
     width: 60px;
+    left: 13px;
     height: 60px;
     display: flex;
-    justify-content: center;
     align-items: center;
     font-size: 2.5em;
     cursor: pointer;
+    transition: 0.5s;
 }
 
-.search
-{
+/* App Name  */
+.main .topbar .mainBoxName {
+    
+    margin-left: 84px;
+    margin-top: 1px;
+    color: var(--purple);
     position: relative;
-    width: 400px;
-    margin: 0 10px;
+    font-weight: 600;
+    font-size: 1.65em;
+    transition: 0.5s;
+
 }
 
-.search label
-{
+.main.active .topbar .search {
+    margin-left: 700px;
+    transition: 0.5s;
+}
+.main.active .topbar .user {
+    margin-left: 1217px;
+    transition: 0.5s;
+}
+
+.main .topbar .mainBoxName .genesis {
+    color: var(--sky);
+}
+
+/* Search bar css */
+.search {
+
+    position: absolute;
+    top: 10px;
+    margin-left: 527px;
+    width: 420px;
+    transition: 0.5s;
+
+}
+
+.search label {
     position: relative;
     width: 100%;
 }
 
-.search label input
-{
+.search label input {
     width: 100%;
     height: 40px;
     border-radius: 40px;
     padding: 5px 20px;
-    padding-left: 35px;
+    padding-left: 48px;
     font-size: 18px;
     outline: none;
     border: 1px solid var(--black2);
 }
 
-.search label ion-icon
-{
+.search label ion-icon {
     position: absolute;
-    top: 0;
-    left: 10px;
-    font-size: 1.2em;
+    align-items: center;
+    margin-top: 8px;
+    left: 12px;
+    font-size: 1.5em;
 }
 
-.user
-{
-    position: relative;
+.user {
+    
     width: 40px;
+    position: absolute;
     height: 40px;
+    top: 8px;
+    align-items: center;
+    margin-left: 1001px;
     border-radius: 50%;
     overflow: hidden;
     cursor: pointer;
+    transition: 0.5s;
 }
 
-.user img
-{
+.user img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit:cover;
+    object-fit: cover;
 }
 
-.cardBox
-{
+.cardBox {
     position: relative;
     width: 100%;
     padding: 20px;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
 }
 
-.cardBox .card{
+.cardBox .card {
     position: relative;
     background: var(--white);
     padding: 30px;
@@ -251,43 +292,38 @@ body {
     display: flex;
     justify-content: space-between;
     cursor: pointer;
-    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
 }
 
-.cardBox .card .numbers
-{
+.cardBox .card .numbers {
     position: relative;
     font-weight: 500;
-    font-size: 2.5em;
+    font-size: 2em;
     color: var(--blue);
 }
-.cardBox .card .cardName
-{
+
+.cardBox .card .cardName {
     color: var(--black2);
     font-size: 1.1em;
     margin-top: 5px;
 }
 
-.cardBox .card .iconBx
-{
-   font-size: 3.5em; 
-   color: var(--black2);
+.cardBox .card .iconBx {
+    font-size: 3.5em;
+    color: var(--black2);
 }
 
-.cardBox .card:hover
-{
+.cardBox .card:hover {
     background: var(--blue);
 }
 
 .cardBox .card:hover .numbers,
 .cardBox .card:hover .cardName,
-.cardBox .card:hover .iconBx
-{
+.cardBox .card:hover .iconBx {
     color: var(--white);
 }
 
-.details
-{
+.details {
     position: relative;
     width: 100%;
     padding: 20px;
@@ -297,30 +333,28 @@ body {
     /* margin-top: 10px; */
 }
 
-.details .recentOrders
-{
+.details .recentOrders {
     position: relative;
     display: grid;
     min-height: 500px;
     background: var(--white);
     padding: 20px;
-    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
     border-radius: 20px;
 }
-.cardHeader
-{
+
+.cardHeader {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
 
-.cardHeader h2
-{
-font-weight: 600;
-color: var(--blue);
+.cardHeader h2 {
+    font-weight: 600;
+    color: var(--blue);
 }
-.btn
-{
+
+.btn {
     position: relative;
     padding: 5px 10px;
     background: var(--blue);
@@ -328,48 +362,48 @@ color: var(--blue);
     color: var(--white);
     border-radius: 6px;
 }
-.details table
-{
+
+.details table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
 }
-.details table thead td
-{
+
+.details table thead td {
     font-weight: 600;
 }
-.details .recentOrders table tr
-{
+
+.details .recentOrders table tr {
     color: var(--black1);
-    border-bottom: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-.details .recentOrders table tr:last-child
-{
+
+.details .recentOrders table tr:last-child {
     border-bottom: none;
 }
-.details .recentOrders table tbody tr:hover
-{
+
+.details .recentOrders table tbody tr:hover {
     background: var(--blue);
     color: var(--white);
 }
-.details .recentOrders table tr td
-{
+
+.details .recentOrders table tr td {
     padding: 10px;
 }
-.details .recentOrders table tr td:last-child
-{
+
+.details .recentOrders table tr td:last-child {
     text-align: end;
 }
-.details .recentOrders table tr td:nth-child(2)
-{
+
+.details .recentOrders table tr td:nth-child(2) {
     text-align: end;
 }
-.details .recentOrders table tr td:nth-child(3)
-{
+
+.details .recentOrders table tr td:nth-child(3) {
     text-align: center;
 }
-.status.delivered
-{
+
+.status.delivered {
     padding: 2px 4px;
     background: #8de02c;
     color: var(--white);
@@ -377,8 +411,8 @@ color: var(--blue);
     font-size: 14px;
     font-weight: 500;
 }
-.status.pending
-{
+
+.status.pending {
     padding: 2px 4px;
     background: #f9ca3f;
     color: var(--white);
@@ -386,8 +420,8 @@ color: var(--blue);
     font-size: 14px;
     font-weight: 500;
 }
-.status.return
-{
+
+.status.return {
     padding: 2px 4px;
     background: #f00;
     color: var(--white);
@@ -395,8 +429,8 @@ color: var(--blue);
     font-size: 14px;
     font-weight: 500;
 }
-.status.inprogress
-{
+
+.status.inprogress {
     padding: 2px 4px;
     background: #1795ce;
     color: var(--white);
@@ -404,26 +438,26 @@ color: var(--blue);
     font-size: 14px;
     font-weight: 500;
 }
-.recentCustomers
-{
-   position: relative;
-   display: grid;
-   min-height: 500px;
-   padding: 20px;
-   background: var(--white);
-   box-shadow: 0 7px 25px rgba(0,0,0,0.08);
-   border-radius: 20px;
+
+.recentCustomers {
+    position: relative;
+    display: grid;
+    min-height: 500px;
+    padding: 20px;
+    background: var(--white);
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
 }
-.recentCustomers .imgBx
-{
+
+.recentCustomers .imgBx {
     position: relative;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     overflow: hidden;
 }
-.recentCustomers .imgBx img
-{
+
+.recentCustomers .imgBx img {
     position: absolute;
     top: 0;
     left: 0;
@@ -431,117 +465,106 @@ color: var(--blue);
     height: 100%;
     object-fit: cover;
 }
-.recentCustomers table tr td
-{
+
+.recentCustomers table tr td {
     padding: 12px 10px;
 }
-.recentCustomers table tr td h4
-{
+
+.recentCustomers table tr td h4 {
     font-size: 16px;
     font-weight: 500;
     line-height: 1.2em;
 }
-.recentCustomers table tr td h4 span
-{
+
+.recentCustomers table tr td h4 span {
     font-size: 14px;
     color: var(--black2);
 }
-.recentCustomers table tr:hover
-{
+
+.recentCustomers table tr:hover {
     background: var(--blue);
     color: var(--white);
 }
-.recentCustomers table tr:hover td h4 span
-{
+
+.recentCustomers table tr:hover td h4 span {
     color: var(--white);
 }
 
 /* Now make it responsive design */
-@media (max-width: 991px)
-{
-    .navigation
-    {
+@media (max-width: 991px) {
+    .navigation {
         left: -300px;
     }
-    .navigation.active
-    {
+
+    .navigation.active {
         width: 300px;
         left: 0px;
     }
-    .main
-    {
+
+    .main {
         width: 100%;
         left: 0;
     }
-    .main.active
-    {
+
+    .main.active {
         left: 300px;
     }
-    .cardBox
-    {
-        grid-template-columns: repeat(2,1fr);
+
+    .cardBox {
+        grid-template-columns: repeat(2, 1fr);
     }
-    .status.inprogress
-    {
+
+    .status.inprogress {
         white-space: nowrap;
     }
 }
-@media (max-width: 768px)
-{
-    .details
-    {
-        grid-template-columns: repeat(1,1fr);
+
+@media (max-width: 768px) {
+    .details {
+        grid-template-columns: repeat(1, 1fr);
     }
-    .recentOrders
-    {
+
+    .recentOrders {
         overflow-x: auto;
     }
-    .status.inprogress
-    {
+
+    .status.inprogress {
         white-space: nowrap;
     }
 }
-@media (max-width: 480px)
-{
-    .cardBox
-    {
-        grid-template-columns: repeat(1,1fr);
+
+@media (max-width: 480px) {
+    .cardBox {
+        grid-template-columns: repeat(1, 1fr);
     }
-    .cardHeader h2
-    {
+
+    .cardHeader h2 {
         font-size: 20px;
     }
-    .user
-    {
+
+    .user {
         min-width: 40px;
     }
-    .navigation
-    {
+
+    .navigation {
         width: 100%;
         left: -100%;
         z-index: 1000;
     }
-    .navigation.active
-    {
+
+    .navigation.active {
         width: 100%;
         left: 0;
     }
-    .toggle
-    {
+
+    .toggle {
         z-index: 10001;
     }
-    .main.active .toggle
-    {
+
+    .main.active .toggle {
         position: fixed;
         right: 0;
         left: initial;
         color: var(--white);
     }
 }
-
-
-
-
-
-
-
