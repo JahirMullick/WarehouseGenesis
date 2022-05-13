@@ -292,7 +292,8 @@ body {
     display: flex;
     justify-content: space-between;
     cursor: pointer;
-    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    /* box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08); */
+    box-shadow: 0 7px 25px #d9d9d9;
 }
 
 .cardBox .card .numbers {
@@ -339,7 +340,8 @@ body {
     min-height: 500px;
     background: var(--white);
     padding: 20px;
-    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    /* box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08); */
+    box-shadow: 0 7px 25px #d9d9d9;
     border-radius: 20px;
 }
 
@@ -445,7 +447,8 @@ body {
     min-height: 500px;
     padding: 20px;
     background: var(--white);
-    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    /* box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08); */
+    box-shadow: 0 7px 25px #d9d9d9;
     border-radius: 20px;
 }
 
