@@ -1,23 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/CSS/Admin dashboard.css">
-    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
-    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
-    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
-    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
-    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
-    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <link rel="stylesheet"
+        href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <link rel="stylesheet"
+        href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <link rel="stylesheet"
+        href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <link rel="stylesheet"
+        href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <link rel="stylesheet"
+        href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <link rel="stylesheet"
+        href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
 
-    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
-
+    <link rel="stylesheet"
+        href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <script type="module" src="/JS/htmlNav.js"></script>
     <title>Document</title>
 </head>
+
 <body>
-    <div class="container">
+    <my-header></my-header>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-8.5.0.js"></script>
+
+    <!--Navigation bar-->
+    <div id="nav-placeholder">
+
+    </div>
+
+    <script>
+        $(function () {
+            $("#nav-placeholder").load("nav.html");
+        });
+    </script>
+    <!--end of Navigation bar-->
+
+
+    <!-- <div class="container">
         <div class="navigation">
             <ul>
                 <li>
@@ -70,10 +100,10 @@
                     </a>
                 </li>
             </ul>
-        </div>
+        </div> -->
 
-        <!-- main -->
-        <div class="main">
+    <!-- main -->
+    <!-- <div class="main">
             <div class="topbar">
                 <div class="toggle">
                     
@@ -82,206 +112,242 @@
 
                 <div class="mainBoxName">
                     <span class="title">Wharehouse<span class="genesis">Genesis</span></span>
-                </div>
+                </div> -->
 
-                <!-- Search -->
-                <div class="search">
+    <!-- Search -->
+    <!-- <div class="search">
                     <label>
                         <input type="text" placeholder="Search here">
                         <ion-icon name="search"></ion-icon>
                     </label>
-                </div>
+                </div> -->
 
-                <!-- User -->
-                <div class="user">
+    <!-- User -->
+    <!-- <div class="user">
                     <img src="/resources/login logo1.png">
                 </div>
+            </div> -->
+
+    <!-- cards -->
+    <div class="cardBox">
+        <div class="card">
+            <div>
+                <div class="numbers">1,504</div>
+                <div class="cardName">Daily Views</div>
             </div>
-
-            <!-- cards -->
-            <div class="cardBox">
-                <div class="card">
-                    <div>
-                        <div class="numbers">1,504</div>
-                        <div class="cardName">Daily Views</div>
-                    </div>
-                    <div class="iconBx">
-                        <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-                </div>
-                <div class="card">
-                    <div>
-                        <div class="numbers">80</div>
-                        <div class="cardName">Sales</div>
-                    </div>
-                    <div class="iconBx">
-                        <ion-icon name="cart-outline"></ion-icon>
-                    </div>
-                </div>
-                <div class="card">
-                    <div>
-                        <div class="numbers">284</div>
-                        <div class="cardName">Comments</div>
-                    </div>
-                    <div class="iconBx">
-                        <ion-icon name="chatbubbles-outline"></ion-icon>
-                    </div>
-                </div>
-                <div class="card">
-                    <div>
-                        <div class="numbers">$9984</div>
-                        <div class="cardName">Earning</div>
-                    </div>
-                    <div class="iconBx">
-                        <ion-icon name="cash-outline"></ion-icon>
-                    </div>
-                </div>
+            <div class="iconBx">
+                <ion-icon name="eye-outline"></ion-icon>
             </div>
-
-            <div class="details">
-                <!-- order details list -->
-                <div class="recentOrders">
-                    <div class="cardHeader">
-                        <h2>Recent Orders</h2>
-                        <a href="#" class="btn">View All</a>
-                    </div>
-                    <table>
-                        <thead>
-                            <tr>
-                                <td>Name</td>
-                                <td>Price</td>
-                                <td>Payment</td>
-                                <td>Status</td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Star Refrigerator</td>
-                                <td>$1200</td>
-                                <td>Paid</td>
-                                <td><span class="status delivered">Delivered</span></td>
-                            </tr>
-
-                            <!-- Time Stamp 41:45 -->
-                            <tr>
-                                <td>Window Coolers</td>
-                                <td>$179</td>
-                                <td>Due</td>
-                                <td><span class="status pending">Pending</span></td>
-                            </tr>
-                            <tr>
-                                <td>Speakers</td>
-                                <td>$620</td>
-                                <td>Paid</td>
-                                <td><span class="status return">Return</span></td>
-                            </tr>
-                            <tr>
-                                <td>Hp Laptop</td>
-                                <td>$700</td>
-                                <td>Due</td>
-                                <td><span class="status inprogress">In Progress</span></td>
-                            </tr>
-                            <tr>
-                                <td>Apple Watch</td>
-                                <td>$545</td>
-                                <td>Paid</td>
-                                <td><span class="status delivered">Delivered</span></td>
-                            </tr>
-                            <tr>
-                                <td>Wall Fan</td>
-                                <td>$110</td>
-                                <td>Paid</td>
-                                <td><span class="status pending">Pending</span></td>
-                            </tr>
-                            <tr>
-                                <td>Adidas Shoes</td>
-                                <td>$600</td>
-                                <td>Paid</td>
-                                <td><span class="status return">Return</span></td>
-                            </tr>
-                            <tr>
-                                <td>Nike Shoes</td>
-                                <td>$550</td>
-                                <td>Due</td>
-                                <td><span class="status inprogress">In Progress</span></td>
-                            </tr>
-                            <tr>
-                                <td>Macbook Pro 16 inc</td>
-                                <td>$4438.96</td>
-                                <td>Paid</td>
-                                <td><span class="status pending">Pending</span></td>
-                            </tr>
-                            <tr>
-                                <td>Ps5</td>
-                                <td>$844.52</td>
-                                <td>Paid</td>
-                                <td><span class="status pending">Pending</span></td>
-                            </tr>
-                            <tr>
-                                <td>Denim Shirts</td>
-                                <td>$110</td>
-                                <td>Due</td>
-                                <td><span class="status inprogress">In Progress</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- New Customers -->
-                <div class="recentCustomers">
-                    <div class="cardHeader">
-                        <h2>Recent Customers</h2>
-                    </div>
-                    <table>
-                        <tr>
-                            <td width="60px"><div class="imgBx"><img src="/resources/img1.jpg"></div></td>
-                            <td><h4>David<br><span>Italy</span></h4></td>
-                        </tr>
-                        <tr>
-                            <td><div class="imgBx"><img src="/resources/img2.jpg"></div></td>
-                            <td><h4>Rayhan<br><span>Dubai</span></h4></td>
-                        </tr>
-                        <tr>
-                            <td><div class="imgBx"><img src="/resources/img3.jpg"></div></td>
-                            <td><h4>Amelia<br><span>France</span></h4></td>
-                        </tr>
-                        <tr>
-                            <td><div class="imgBx"><img src="/resources/img4.jpg"></div></td>
-                            <td><h4>Olivia<br><span>USA</span></h4></td>
-                        </tr>
-                        <tr>
-                            <td><div class="imgBx"><img src="/resources/img5.jpg"></div></td>
-                            <td><h4>Wasif Ali<br><span>India</span></h4></td>
-                        </tr>
-                        <tr>
-                            <td><div class="imgBx"><img src="/resources/img6.jpg"></div></td>
-                            <td><h4>Ashraf<br><span>India</span></h4></td>
-                        </tr>
-                        <tr>
-                            <td><div class="imgBx"><img src="/resources/img7.jpg"></div></td>
-                            <td><h4>Diana<br><span>Malaysia</span></h4></td>
-                        </tr>
-                        <tr>
-                            <td><div class="imgBx"><img src="/resources/img8.jpg"></div></td>
-                            <td><h4>Amit<br><span>India</span></h4></td>
-                        </tr>
-                        <tr>
-                            <td><div class="imgBx"><img src="/resources/img9.jpg"></div></td>
-                            <td><h4>Li jing<br><span>China</span></h4></td>
-                        </tr>
-                    </table>
-                </div>
-
-
+        </div>
+        <div class="card">
+            <div>
+                <div class="numbers">80</div>
+                <div class="cardName">Sales</div>
             </div>
-
+            <div class="iconBx">
+                <ion-icon name="cart-outline"></ion-icon>
+            </div>
+        </div>
+        <div class="card">
+            <div>
+                <div class="numbers">284</div>
+                <div class="cardName">Comments</div>
+            </div>
+            <div class="iconBx">
+                <ion-icon name="chatbubbles-outline"></ion-icon>
+            </div>
+        </div>
+        <div class="card">
+            <div>
+                <div class="numbers">$9984</div>
+                <div class="cardName">Earning</div>
+            </div>
+            <div class="iconBx">
+                <ion-icon name="cash-outline"></ion-icon>
+            </div>
         </div>
     </div>
+
+    <div class="details">
+        <!-- order details list -->
+        <div class="recentOrders">
+            <div class="cardHeader">
+                <h2>Recent Orders</h2>
+                <a href="#" class="btn">View All</a>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Price</td>
+                        <td>Payment</td>
+                        <td>Status</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Star Refrigerator</td>
+                        <td>$1200</td>
+                        <td>Paid</td>
+                        <td><span class="status delivered">Delivered</span></td>
+                    </tr>
+
+                    <!-- Time Stamp 41:45 -->
+                    <tr>
+                        <td>Window Coolers</td>
+                        <td>$179</td>
+                        <td>Due</td>
+                        <td><span class="status pending">Pending</span></td>
+                    </tr>
+                    <tr>
+                        <td>Speakers</td>
+                        <td>$620</td>
+                        <td>Paid</td>
+                        <td><span class="status return">Return</span></td>
+                    </tr>
+                    <tr>
+                        <td>Hp Laptop</td>
+                        <td>$700</td>
+                        <td>Due</td>
+                        <td><span class="status inprogress">In Progress</span></td>
+                    </tr>
+                    <tr>
+                        <td>Apple Watch</td>
+                        <td>$545</td>
+                        <td>Paid</td>
+                        <td><span class="status delivered">Delivered</span></td>
+                    </tr>
+                    <tr>
+                        <td>Wall Fan</td>
+                        <td>$110</td>
+                        <td>Paid</td>
+                        <td><span class="status pending">Pending</span></td>
+                    </tr>
+                    <tr>
+                        <td>Adidas Shoes</td>
+                        <td>$600</td>
+                        <td>Paid</td>
+                        <td><span class="status return">Return</span></td>
+                    </tr>
+                    <tr>
+                        <td>Nike Shoes</td>
+                        <td>$550</td>
+                        <td>Due</td>
+                        <td><span class="status inprogress">In Progress</span></td>
+                    </tr>
+                    <tr>
+                        <td>Macbook Pro 16 inc</td>
+                        <td>$4438.96</td>
+                        <td>Paid</td>
+                        <td><span class="status pending">Pending</span></td>
+                    </tr>
+                    <tr>
+                        <td>Ps5</td>
+                        <td>$844.52</td>
+                        <td>Paid</td>
+                        <td><span class="status pending">Pending</span></td>
+                    </tr>
+                    <tr>
+                        <td>Denim Shirts</td>
+                        <td>$110</td>
+                        <td>Due</td>
+                        <td><span class="status inprogress">In Progress</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- New Customers -->
+        <div class="recentCustomers">
+            <div class="cardHeader">
+                <h2>Recent Customers</h2>
+            </div>
+            <table>
+                <tr>
+                    <td width="60px">
+                        <div class="imgBx"><img src="/resources/img1.jpg"></div>
+                    </td>
+                    <td>
+                        <h4>David<br><span>Italy</span></h4>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="imgBx"><img src="/resources/img2.jpg"></div>
+                    </td>
+                    <td>
+                        <h4>Rayhan<br><span>Dubai</span></h4>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="imgBx"><img src="/resources/img3.jpg"></div>
+                    </td>
+                    <td>
+                        <h4>Amelia<br><span>France</span></h4>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="imgBx"><img src="/resources/img4.jpg"></div>
+                    </td>
+                    <td>
+                        <h4>Olivia<br><span>USA</span></h4>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="imgBx"><img src="/resources/img5.jpg"></div>
+                    </td>
+                    <td>
+                        <h4>Wasif Ali<br><span>India</span></h4>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="imgBx"><img src="/resources/img6.jpg"></div>
+                    </td>
+                    <td>
+                        <h4>Ashraf<br><span>India</span></h4>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="imgBx"><img src="/resources/img7.jpg"></div>
+                    </td>
+                    <td>
+                        <h4>Diana<br><span>Malaysia</span></h4>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="imgBx"><img src="/resources/img8.jpg"></div>
+                    </td>
+                    <td>
+                        <h4>Amit<br><span>India</span></h4>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="imgBx"><img src="/resources/img9.jpg"></div>
+                    </td>
+                    <td>
+                        <h4>Li jing<br><span>China</span></h4>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+    </div>
+
+    </div>
+    </div>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 
-<script>
+    <!-- <script>
 
     // MenuToggle
     let toggle = document.querySelector('.toggle');
@@ -301,7 +367,8 @@
     }
     list.forEach((item) =>
     item.addEventListener('mouseover',activeLink));
-</script>
+</script> -->
 
 </body>
+
 </html>
