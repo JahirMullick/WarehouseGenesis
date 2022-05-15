@@ -15,23 +15,23 @@
       <h1>Admin Login</h1>
       <form method="post">
         <div class="txt_field">
-          <input type="text" required>
+          <input id="usern" type="text" required>
           <span></span>
           <label>Username</label>
         </div>
         <div class="txt_field">
-          <input type="password" required>
+          <input id="passw" type="password" required>
           <span></span>
           <label>Password</label>
         </div>
         <div class="pass"> 
           <a href="#"> Forgot Password? </a> </div><br>
-        <input type="submit" value="Login">
+        <input onclick="Get_Request()" type="submit" value="Login">
         <div class="signup_link">
           Not a member? <a href="#">Signup</a>
         </div>
       </form>
     </div>
-    <script src="/JS/LoginForm.js"></script>
+    <script src="/JS/LoginRequest.js"></script>
   </body>
 </html>

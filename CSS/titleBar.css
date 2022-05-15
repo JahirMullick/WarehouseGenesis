@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+:root {
+    --blue: #287bff;
+    --white: #fff;
+    --grey: #f5f5f5;
+    --black1: #222;
+    --black2: #999;
+    --sky: #0AA1DD;
+    --purple: #4D4C7D;
+}
+
+
+.topbar {
+    
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+/* Toggle menu */
+.toggle {
+
+    position: absolute;
+    width: 60px;
+    left: 13px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    font-size: 2.5em;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+/* App Name  */
+.mainBoxName {
+    
+    margin-left: 84px;
+    margin-top: 1px;
+    color: var(--purple);
+    position: relative;
+    font-weight: 600;
+    font-size: 1.65em;
+    transition: 0.5s;
+
+}
+
+.active .topbar .search {
+    margin-left: 700px;
+    transition: 0.5s;
+}
+.active .topbar .user {
+    margin-left: 1217px;
+    transition: 0.5s;
+}
+
+.topbar .mainBoxName .genesis {
+    color: var(--sky);
+}
+
+/* Search bar css */
+.search {
+
+    position: absolute;
+    top: 10px;
+    margin-left: 527px;
+    width: 420px;
+    transition: 0.5s;
+
+}
+
+.search label {
+    position: relative;
+    width: 100%;
+}
+
+.search label input {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px 20px;
+    padding-left: 48px;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid var(--black2);
+}
+
+.search label ion-icon {
+    position: absolute;
+    align-items: center;
+    margin-top: 8px;
+    left: 12px;
+    font-size: 1.5em;
+}
+
+.user {
+    
+    width: 40px;
+    position: absolute;
+    height: 40px;
+    top: 8px;
+    align-items: center;
+    margin-left: 1001px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.user img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
