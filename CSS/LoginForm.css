@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Sacramento&family=Satisfy&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
-
+/* @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +14,6 @@ body {
   margin: 0;
   padding: 0;
   background: linear-gradient(120deg, #2980b9, #8e44ad);
-  /* background: url(/resources/warehouse.jpg); */
   background-size: cover;
   min-height: 100vh;
   background-position: center;
@@ -62,12 +61,10 @@ body {
   left: 75%;
   transform: translate(-50%, -50%);
   width: 400px;
-  height: 450px;
+  height: 420px;
   background: white;
-  /* background: rgba(255, 255, 255, 0.1); */
   border-radius: 10px;
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
-  /* backdrop-filter: blur(10px); */
 }
 
 .img {
@@ -81,8 +78,8 @@ body {
   text-align: center;
   padding: 72px 0px 15px;
   border-bottom: 1px solid silver;
-  /* font-family: 'Dancing Script', cursive; */
-  font-family: 'Sacramento', cursive;
+  /* font-family: 'Sacramento', cursive; */
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .center form {
