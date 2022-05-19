@@ -1,37 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/CSS/LoginForm.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <title>Login</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/CSS/LoginForm.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <script src="/JS/LoginForm.js"></script>
+  <title>Login</title>
 </head>
+
 <body>
-  <div class="massage">Wharehouse<span>Genesis</span><p> Facebook helps you connect and share with the people in your life.</p></div>
-    <div class="center">
-      <img class="img" src="/resources/undraw_profile_pic_ic-5-t (1).svg" alt="">
-      <h1>Admin Login</h1>
-      <form method="post">
-        <div class="txt_field">
-          <input id="usern" type="text" required>
-          <span></span>
-          <label>Username</label>
-        </div>
-        <div class="txt_field">
-          <input id="passw" type="password" required>
-          <span></span>
-          <label>Password</label>
-        </div>
-        <div class="pass"> 
-          <a href="#"> Forgot Password? </a> </div><br>
-        <input onclick="Get_Request()" type="submit" value="Login">
-        <div class="signup_link">
-          Not a member? <a href="#">Signup</a>
-        </div>
-      </form>
+  <div class="card">
+
+    <div class="massage">Warehouse<span>Genesis</span>
+      <p> Trade isn't about goods. Trade is about information. Goods sit in the warehouse until information moves them.
+      </p>
     </div>
-    <script src="/JS/LoginRequest.js"></script>
-  </body>
+  </div>
+
+  <div class="center">
+    <img class="img" src="/resources/undraw_profile_pic_ic-5-t (1).svg" alt="">
+    <h1>Admin Login</h1>
+    <form method="post">
+      <div class="txt_field">
+        <input id="usern" type="text" required>
+        <span></span>
+        <label>Username</label>
+      </div>
+      <div class="txt_field">
+        <input id="passw" type="password" required>
+        <span></span>
+        <label>Password</label>
+      </div>
+      <div class="pass">
+        <a href="#"> Forgot Password? </a>
+      </div><br>
+      <input id="btn" onclick="Get_Request()"type="button" value="Login">
+    </form>
+  </div>
+
+</body>
+
 </html>

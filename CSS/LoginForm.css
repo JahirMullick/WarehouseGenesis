@@ -10,23 +10,38 @@
 }
 
 body {
+  overflow: hidden;
   margin: 0;
   padding: 0;
   background: linear-gradient(120deg, #2980b9, #8e44ad);
-  height: 100vh;
-  overflow: hidden;
+  /* background: url(/resources/warehouse.jpg); */
+  background-size: cover;
+  min-height: 100vh;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0 25px 25px rgb(0 0 0 / 10%);
+  border-radius: 20px;
+  width: 634px;
+  margin-left: -491px;
+  margin-top: 7%;
+  height: 220px;
+  backdrop-filter: blur(2px);
 }
 
 .massage {
-  justify-content: center;
-  align-items: center;
-  width: 60%;
-  margin-top: 19%;
-  margin-left: 9%;
+  width: 92%;
+  margin-top: 8%;
+  margin-left: 5%;
   font-size: 44px;
   font-weight: 600;
   color: #363062;
-  /* color: black; */
 }
 
 .massage span {
@@ -47,9 +62,12 @@ body {
   left: 75%;
   transform: translate(-50%, -50%);
   width: 400px;
+  height: 450px;
   background: white;
+  /* background: rgba(255, 255, 255, 0.1); */
   border-radius: 10px;
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+  /* backdrop-filter: blur(10px); */
 }
 
 .img {
@@ -132,7 +150,7 @@ form .txt_field {
   text-decoration: underline;
 }
 
-input[type="submit"] {
+input[type="button"] {
   width: 100%;
   height: 50px;
   border: 1px solid;
@@ -145,7 +163,7 @@ input[type="submit"] {
   outline: none;
 }
 
-input[type="submit"]:hover {
+input[type="button"]:hover {
   border-color: #2691d9;
   transition: .5s;
 }
