@@ -1,7 +1,14 @@
 {
-  "admin":
+  "admin":[
     {
       "username":"google.com",
       "password": "$@110"
+    },
+    {
+      "username":"jahirmj",
+      "password": "12345"
     }
+    
+  ]
 }
+    
