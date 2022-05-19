@@ -10,7 +10,7 @@ app.on('ready', function(){
     mainWindow = new BrowserWindow();
     mainWindow.loadURL(URL.format(
         {
-            pathname: path.join(__dirname, 'payment.html'),
+            pathname: path.join(__dirname, '/Html/LoginForm.html'),
             protocol:'file',
             slashes: true
         }
