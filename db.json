@@ -9,6 +9,37 @@
       "password": "12345"
     }
     
+  ],
+  "vehicles":[
+    {
+      "name": "Tesla Cyber Truck",
+      "size": "8ft",
+      "capacity": "100 Tons",
+      "status": "Available"
+    },
+    {
+      "name": "Tata Intra V10 Pickup",
+      "Brand": "Tata",
+      "Power": "44 HP",
+      "Fuel": "Diesel",
+      "Engine Cylinders": "2",
+      "No. of Tyre": "4",
+      "GVW": "2120 KG",
+      "Payload": "1000 KG",
+      "status": "Available"
+    },
+    {
+      "name": "Tata T.10 Ultra Truck",
+      "Brand": "Tata",
+      "Power": "123 HP",
+      "Fuel": "Diesel",
+      "Fuel Tank": "160 Ltr.",
+      "Engine": "3300 CC",
+      "GVW": "9600 KG",
+      "No. of Tyre": "6",
+      "Payload": "N/A",
+      "status": "Available"
+    }
   ]
 }
     
