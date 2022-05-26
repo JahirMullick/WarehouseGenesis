@@ -14,7 +14,11 @@ function Get_Request() {
             window.location.href = "/Html/admin dashboard.html";
         }
         else {
-            console.log("Wrong URL!");
+            let message = document.getElementById("message");
+            message.textContent = "Please enter valid Userid or Passwords";
+            message.style.backgroundColor = "#ff4d4d";
+            message.style.borderRadius = "8px";
+            message.style.paddingLeft = "20px";
         }
     }
 }
