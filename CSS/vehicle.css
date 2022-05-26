@@ -265,6 +265,7 @@ body {
     border: 2px solid silver;
     padding: 7px 5px 7px 10px;
     border-radius: 20px;
+    background: #fff;
     opacity: 0;
     visibility: hidden;
     transition: 0.3s;
