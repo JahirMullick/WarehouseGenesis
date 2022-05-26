@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+:root {
+    --blue: #287bff;
+    --white: #fff;
+    --grey: #f5f5f5;
+    --black1: #222;
+    --black2: #999;
+    --sky: #0AA1DD;
+    --purple: #4D4C7D;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+/* main */
+.main {
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background: var(--white);
+    transition: 0.5s;
+}
+
+.main.active {
+    width: calc(100% - 80px);
+    left: 80px;
+}
+
+
+
+.details {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 30px;
+    /* margin-top: 10px; */
+}
+
+.main .details .recentOrders {
+    position: relative;
+    display: grid;
+    min-height: 500px;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px #d9d9d9;
+    border-radius: 20px;
+}
+
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.cardHeader h2 {
+    font-weight: 600;
+    color: var(--blue);
+}
+
+.btn {
+    position: relative;
+    padding: 5px 10px;
+    background: var(--blue);
+    text-decoration: none;
+    color: var(--white);
+    border-radius: 6px;
+}
+
+.details table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.details table thead td {
+    font-weight: 600;
+}
+
+.details .recentOrders table tr {
+    color: var(--black1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.details .recentOrders table tr:last-child {
+    border-bottom: none;
+}
+
+.details .recentOrders table tbody tr:hover {
+    background: var(--blue);
+    color: var(--white);
+}
+
+.details .recentOrders table tr td {
+    padding: 10px;
+}
+
+.details .recentOrders table tr td:last-child {
+    text-align: end;
+}
+
+.details .recentOrders table tr td:nth-child(2) {
+    text-align: end;
+}
+
+.details .recentOrders table tr td:nth-child(3) {
+    text-align: center;
+}
+
+.status.available {
+    padding: 2px 4px;
+    background: #8de02c;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.status.On-Trip {
+    padding: 2px 4px;
+    background: #f9ca3f;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.status.not-available {
+    padding: 2px 4px;
+    background: #f00;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.status.inprogress {
+    padding: 2px 4px;
+    background: #1795ce;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+.main .details .recentCustomers {
+    position: relative;
+    display: grid;
+    min-height: 500px;
+    padding: 20px;
+    background: var(--white);
+    box-shadow: 0 7px 25px #d9d9d9;
+    border-radius: 20px;
+}
+
+.recentCustomers .pic {
+    position: absolute;
+    margin: 66px 0px 0px 91px;
+    width: 169px;
+    height: 95px;
+    /* box-shadow: 0 7px 25px #d9d9d9; */
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.main.active .recentCustomers .pic{
+    margin: 66px 0px 0px 116px;
+    transition: 0.5s;
+}
+
+.recentCustomers .pic img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid silver;
+    border-radius: 55px;
+    object-fit: cover;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
+.VDetails{
+    
+    position: absolute;
+    margin-top: 176px;
+    justify-content: center;
+    align-items: center;
+}
+
+.Vdetails{
+    position: relative;
+    height: 270px;
+    margin: 0px 0px 0px 28px;
+    padding: 24px 23px 10px 23px;
+    width: 290px;
+    border: 2px solid silver;
+    box-shadow: 0 7px 25px #d9d9d9;
+    border-radius: 20px;
+    background: #d9d9d9;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    resize: none;
+    outline: none;
+    transition: 0.5s;
+}
+.main.active .Vdetails{
+    width: 365px;
+    transition: 0.5s;
+}
+
+
+/* Add Button */
+
+
+.actiono{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+    /* background: #fff; */
+    background: #287bff;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+.actiono span{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f5f5f5;
+    font-size: 2em;
+    transition: 0.3s;
+}
+
+.actiono.active span{
+    transform: rotate(135deg);
+}
+
+.actiono ul{
+    position: absolute;
+    bottom: 55px;
+    border: 2px solid silver;
+    padding: 7px 5px 7px 10px;
+    border-radius: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+.actiono ul li{
+    list-style: none;
+    padding: 7px 0;
+}
+.actiono.active ul{
+    /* position: fixed; */
+    bottom: 60px;
+    opacity: 1;
+    visibility: visible;
+    transition: 0.3s;
+}
+.actiono.active ul li{
+    list-style: none;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    padding: 7px 0;
+    transition: 0.3s;
+}
+.actiono ul li:hover{
+    font-weight: 500;
+}
+.actiono ul li:not(:last-child){
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.actiono ul li ion-icon{
+    margin-right: 10px;
+    font-size: 1.5em;
+    opacity: 0.2;
+}
+
+.actiono ul li:hover ion-icon{
+    opacity: 1;
+}
