@@ -250,10 +250,10 @@ body {
     color: var(--black2);
 }
 
-.recentCustomers table tr:hover {
+/* .recentCustomers table tr:hover {
     background: var(--blue);
     color: var(--white);
-}
+} */
 
 .recentCustomers table tr:hover td h4 span {
     color: var(--white);
