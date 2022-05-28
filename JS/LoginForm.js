@@ -15,10 +15,12 @@ function Get_Request() {
         }
         else {
             let message = document.getElementById("message");
-            message.textContent = "Please enter valid Userid or Passwords";
-            message.style.backgroundColor = "#ff4d4d";
+            message.textContent = "Enter valid Username or Password!";
+            message.style.color = "#ff4d4d";
             message.style.borderRadius = "8px";
             message.style.paddingLeft = "20px";
+            message.style.fontSize = "17px";
+			message.style.fontWeight = "500";
         }
     }
 }
