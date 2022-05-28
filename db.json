@@ -1,16 +1,12 @@
 {
-  "admin":[
+  "admin": [
     {
-      "username":"google.com",
-      "password": "$@110"
-    },
-    {
-      "username":"jahirmj",
-      "password": "12345"
+      "id": 1,
+      "username": "admin",
+      "password": "admin1!@#"
     }
-    
   ],
-  "vehicles":[
+  "vehicles": [
     {
       "id": 1,
       "name": "Tesla Cyber Truck",
@@ -45,4 +41,3 @@
     }
   ]
 }
-    
