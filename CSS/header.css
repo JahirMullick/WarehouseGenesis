@@ -51,8 +51,13 @@ body {
     border-bottom-left-radius: 30px;
 }
 
-.navigation ul li:hover,
-.navigation ul li.hovered {
+.navigation ul li:hover
+{
+    background: var(--white);
+}
+
+.navigation ul li.hovered
+{
     background: var(--white);
 }
 
@@ -160,6 +165,16 @@ body {
     pointer-events: none;
 }
 
+@media (max-width: 1326px) {
+    .navigation {
+        /* left: -300px; */
+    }
+
+    .navigation.active {
+        width: 300px;
+        left: 0px;
+    }
+}
 @media (max-width: 991px) {
     .navigation {
         left: -300px;
