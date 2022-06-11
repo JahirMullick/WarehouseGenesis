@@ -10,6 +10,7 @@
 :root {
     --blue: #287bff;
     --white: #fff;
+    --oFFwhite: #ecf0f3;
     --grey: #f5f5f5;
     --black1: #222;
     --black2: #999;
@@ -102,7 +103,7 @@ body {
 
 .details .recentOrders {
     position: relative;
-    display: grid;
+    /* display: grid; */
     min-height: 500px;
     background: var(--white);
     padding: 20px;
@@ -111,9 +112,16 @@ body {
     border-radius: 20px;
 }
 
-.cardHeader {
+.recentOrders .cardHeader {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 44px;
+    align-items: flex-start;
+}
+.recentCustomers .cardHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -18px;
     align-items: flex-start;
 }
 
@@ -142,6 +150,10 @@ body {
 }
 
 .details .recentOrders table tr {
+    color: var(--black1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.details .recentCustomers table tr {
     color: var(--black1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
