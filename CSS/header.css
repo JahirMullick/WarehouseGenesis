@@ -41,6 +41,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
+    /* display: grid; */
 }
 
 .navigation ul li {
@@ -49,6 +50,8 @@ body {
     list-style: none;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
+    /* background-size: cover; */
+    display: grid;
 }
 
 .navigation ul li:hover
@@ -102,6 +105,7 @@ body {
     text-align: center;
 } */
 
+.about-us-img,
 .navigation ul li a .icon {
     position: relative;
     display: block;
@@ -110,6 +114,7 @@ body {
     line-height: 70px;
     text-align: center;
 }
+
 
 .navigation ul li a .mainLogo {
     position: relative;
@@ -120,6 +125,9 @@ body {
     text-align: center;
 }
 
+.navigation ul li .about-us-img{
+    font-size: 0.6em;
+}
 .navigation ul li a .icon ion-icon {
     font-size: 1.60em;
 }
