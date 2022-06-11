@@ -1,0 +1,19 @@
+
+.fields input{
+    border: none;
+    outline: none;
+    width: 90%;
+    background: none;
+    font-size: 18px;
+    color: #555;
+    padding: 20px 10px 20px 5px;
+}
+
+.username {
+    margin-top: -13px;
+    padding: 10px 20px 10px 20px;
+    margin-bottom: 35px;
+    border-radius: 25px;
+    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #cbced1;
+}
+
