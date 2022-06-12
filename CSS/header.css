@@ -10,6 +10,7 @@
 :root {
     --blue: #287bff;
     --white: #fff;
+    --oFFwhite: #ecf0f3;
     --grey: #f5f5f5;
     --black1: #222;
     --black2: #999;
@@ -41,6 +42,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
+    /* display: grid; */
 }
 
 .navigation ul li {
@@ -49,6 +51,8 @@ body {
     list-style: none;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
+    /* background-size: cover; */
+    /* display: grid; */
 }
 
 .navigation ul li:hover
@@ -102,6 +106,7 @@ body {
     text-align: center;
 } */
 
+
 .navigation ul li a .icon {
     position: relative;
     display: block;
@@ -110,6 +115,7 @@ body {
     line-height: 70px;
     text-align: center;
 }
+
 
 .navigation ul li a .mainLogo {
     position: relative;
@@ -165,16 +171,16 @@ body {
     pointer-events: none;
 }
 
-@media (max-width: 1326px) {
+/* @media (max-width: 1326px) {
     .navigation {
-        /* left: -300px; */
+        left: -300px;
     }
 
     .navigation.active {
         width: 300px;
         left: 0px;
     }
-}
+} */
 @media (max-width: 991px) {
     .navigation {
         left: -300px;

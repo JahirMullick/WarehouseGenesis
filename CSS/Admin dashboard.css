@@ -1,21 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Ubuntu', sans-serif;
-}
-
-:root {
+/* :root {
     --blue: #287bff;
     --white: #fff;
+    --oFFwhite: #ecf0f3;
     --grey: #f5f5f5;
     --black1: #222;
     --black2: #999;
     --sky: #0AA1DD;
     --purple: #4D4C7D;
-}
+} */
 
 body {
     min-height: 100vh;
@@ -39,6 +33,11 @@ body {
 .main.active {
     width: calc(100% - 80px);
     left: 80px;
+}
+
+.bgChange{
+    background-color: #e7e7e7;
+    /* background-color: black; */
 }
 
 .cardBox {
@@ -102,7 +101,7 @@ body {
 
 .details .recentOrders {
     position: relative;
-    display: grid;
+    /* display: grid; */
     min-height: 500px;
     background: var(--white);
     padding: 20px;
@@ -111,9 +110,16 @@ body {
     border-radius: 20px;
 }
 
-.cardHeader {
+.recentOrders .cardHeader {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 44px;
+    align-items: flex-start;
+}
+.recentCustomers .cardHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -18px;
     align-items: flex-start;
 }
 
@@ -142,6 +148,10 @@ body {
 }
 
 .details .recentOrders table tr {
+    color: var(--black1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.details .recentCustomers table tr {
     color: var(--black1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }

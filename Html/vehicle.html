@@ -1,159 +1,121 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vehicle</title>
-
     <link rel="stylesheet" href="/CSS/vehicle.css">
-    
+
     <script src="/JS/Vehicle.js"></script>
-
-
-    <!-- This is for HTML Header/ Navigation menu -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script>
-        $(function () {
-            $('#header').load('/Html/header.html');
-        });
-    </script>
-
-    <!-- This is for HTML Topbar/ top heading -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script>
-        $(function () {
-            $('#titlebar').load('/Html/titleBar.html');
-        });
-    </script>
-
-
-
 </head>
-<body>
-    <div class="container">
 
-        <div id="header"></div>
 
-        <div class="main">
+<div class="details">
+    <!-- order details list -->
+    <div class="recentOrders">
+        <div class="cardHeader">
+            <h2>Vehicle List</h2>
+            <a href="#" class="btn">View All</a>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <!-- <td>Size</td> -->
+                    <!-- <td>Capacity</td> -->
+                    <td>Status</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="1" onclick="Get_Request()">
+                    <td>Tesla Cyber Truck</td>
 
-            <div id="titlebar"></div>
+                    <td><span class="status available">Available</span></td>
+                </tr>
 
-            <div class="details">
-                <!-- order details list -->
-                <div class="recentOrders">
-                    <div class="cardHeader">
-                        <h2>Vehicle List</h2>
-                        <a href="#" class="btn">View All</a>
-                    </div>
-                    <table>
-                        <thead>
-                            <tr>
-                                <td>Name</td>
-                                <!-- <td>Size</td> -->
-                                <!-- <td>Capacity</td> -->
-                                <td>Status</td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr id="1" onclick="Get_Request()">
-                                <td>Tesla Cyber Truck</td>
-                                
-                                <td><span class="status available">Available</span></td>
-                            </tr>
+                <tr id="2">
+                    <td>Tata Intra V10 Pickup</td>
 
-                            <tr id="2">
-                                <td>Tata Intra V10 Pickup</td>
-                                
-                                <td><span class="status On-Trip">On-Trip</span></td>
-                            </tr>
-                            <tr id="3">
-                                <td>Tata T.10 Ultra Truck</td>
-                                
-                                <td><span class="status not-available">Not-Available</span></td>
-                            </tr>
-                            <tr>
-                                <td>Hp Laptop</td>
-                                
-                                <td><span class="status inprogress">In Progress</span></td>
-                            </tr>
-                            <tr>
-                                <td>Apple Watch</td>
-                                
-                                <td><span class="status available">Available</span></td>
-                            </tr>
-                            <tr>
-                                <td>Wall Fan</td>
-                                
-                                <td><span class="status On-Trip">On-Trip</span></td>
-                            </tr>
-                            <tr>
-                                <td>Adidas Shoes</td>
-                                
-                                <td><span class="status not-available">Not-Available</span></td>
-                            </tr>
-                            <tr>
-                                <td>Nike Shoes</td>
-                               
-                                <td><span class="status inprogress">In Progress</span></td>
-                            </tr>
-                            <tr>
-                                <td>Macbook Pro 16 inc</td>
-                                
-                                <td><span class="status On-Trip">On-Trip</span></td>
-                            </tr>
-                            <tr>
-                                <td>Ps5</td>
-                                <td><span class="status On-Trip">On-Trip</span></td>
-                            </tr>
-                            <!-- <tr>
+                    <td><span class="status On-Trip">On-Trip</span></td>
+                </tr>
+                <tr id="3">
+                    <td>Tata T.10 Ultra Truck</td>
+
+                    <td><span class="status not-available">Not-Available</span></td>
+                </tr>
+                <tr>
+                    <td>Hp Laptop</td>
+
+                    <td><span class="status inprogress">In Progress</span></td>
+                </tr>
+                <tr>
+                    <td>Apple Watch</td>
+
+                    <td><span class="status available">Available</span></td>
+                </tr>
+                <tr>
+                    <td>Wall Fan</td>
+
+                    <td><span class="status On-Trip">On-Trip</span></td>
+                </tr>
+                <tr>
+                    <td>Adidas Shoes</td>
+
+                    <td><span class="status not-available">Not-Available</span></td>
+                </tr>
+                <tr>
+                    <td>Nike Shoes</td>
+
+                    <td><span class="status inprogress">In Progress</span></td>
+                </tr>
+                <tr>
+                    <td>Macbook Pro 16 inc</td>
+
+                    <td><span class="status On-Trip">On-Trip</span></td>
+                </tr>
+                <tr>
+                    <td>Ps5</td>
+                    <td><span class="status On-Trip">On-Trip</span></td>
+                </tr>
+                <!-- <tr>
                                 <td>Denim Shirts</td>
                                 <td><span class="status inprogress">In Progress</span></td>
                             </tr> -->
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- New Customers -->
-                <div class="recentCustomers">
-                    <div class="cardHeader">
-                        <h2>Vehical Details</h2>
-                    </div>
-                    <div class="pic">
-                        <img src="/resources/Truck/Tata Intra V10 Pickup.jpg">
-                    </div>
-                    <div class="VDetails">
-                        <textarea id="vd" class="Vdetails" cols="30" rows="10" readonly></textarea>
-                        <!-- <input id="vd" class="Vdetails" cols="30" rows="10" readonly> -->
-                    </div>
-                    
-                </div>
-                
-                <div class="actiono" onclick="actionToggle()">
-                    <span><ion-icon name="add-outline"></ion-icon></span>
-                    <ul>
-                        <li>
-                            <ion-icon name="add-outline"></ion-icon>
-                        </li>
-                        <li>
-                            <ion-icon name="cloud-upload-outline"></ion-icon>
-                        </li>
-                        <li>
-                            <ion-icon name="trash-outline"></ion-icon>
-                        </li>
-                    </ul>
-                </div>
-                <script type="text/javascript">
-                    function actionToggle() {
-                        var action = document.querySelector('.actiono');
-                        action.classList.toggle('active')
-                    }
-                </script>
-
-        </div>
-        
+            </tbody>
+        </table>
     </div>
-</body>
-</html>
+
+    <!-- New Customers -->
+    <div class="recentCustomers">
+        <div class="cardHeader">
+            <h2>Vehical Details</h2>
+        </div>
+        <div class="pic">
+            <img src="/resources/Truck/Tata Intra V10 Pickup.jpg">
+        </div>
+        <div class="VDetails">
+            <textarea id="vd" class="Vdetails" cols="30" rows="10" readonly></textarea>
+            <!-- <input id="vd" class="Vdetails" cols="30" rows="10" readonly> -->
+        </div>
+
+    </div>
+
+    <div class="actiono" onclick="actionToggle()">
+        <span>
+            <ion-icon name="add-outline"></ion-icon>
+        </span>
+        <ul>
+            <li>
+                <ion-icon name="add-outline"></ion-icon>
+            </li>
+            <li>
+                <ion-icon name="cloud-upload-outline"></ion-icon>
+            </li>
+            <li>
+                <ion-icon name="trash-outline"></ion-icon>
+            </li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        function actionToggle() {
+            var action = document.querySelector('.actiono');
+            action.classList.toggle('active')
+        }
+    </script>
+</div>
