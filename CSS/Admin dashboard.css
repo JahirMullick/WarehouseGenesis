@@ -1,13 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Ubuntu', sans-serif;
-}
-
-:root {
+/* :root {
     --blue: #287bff;
     --white: #fff;
     --oFFwhite: #ecf0f3;
@@ -16,7 +9,7 @@
     --black2: #999;
     --sky: #0AA1DD;
     --purple: #4D4C7D;
-}
+} */
 
 body {
     min-height: 100vh;
@@ -40,6 +33,11 @@ body {
 .main.active {
     width: calc(100% - 80px);
     left: 80px;
+}
+
+.bgChange{
+    background-color: #e7e7e7;
+    /* background-color: black; */
 }
 
 .cardBox {
