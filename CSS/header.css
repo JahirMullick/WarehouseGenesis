@@ -10,6 +10,7 @@
 :root {
     --blue: #287bff;
     --white: #fff;
+    --oFFwhite: #ecf0f3;
     --grey: #f5f5f5;
     --black1: #222;
     --black2: #999;
@@ -51,7 +52,7 @@ body {
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
     /* background-size: cover; */
-    display: grid;
+    /* display: grid; */
 }
 
 .navigation ul li:hover
