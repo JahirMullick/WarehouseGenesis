@@ -1,6 +1,6 @@
 
 function aboutusPage() {
-    $('#refresh-section').load('/Html/about us.html');
+    $('#refresh-section').load('/Html/aboutus.html');
 };
 function dasboardPage() {
     $('#refresh-section').load(location.href + " #refresh-section");
