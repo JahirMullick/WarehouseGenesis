@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 
-/* :root {
+:root {
     --blue: #287bff;
     --white: #fff;
-    --oFFwhite: #ecf0f3;
+    --oFFwhite: #F9F9F9;
     --grey: #f5f5f5;
     --black1: #222;
     --black2: #999;
     --sky: #0AA1DD;
     --purple: #4D4C7D;
-} */
+}
 
 body {
     min-height: 100vh;
@@ -36,7 +36,7 @@ body {
 }
 
 .bgChange{
-    background-color: #e7e7e7;
+    background-color: var(--oFFwhite);
     /* background-color: black; */
 }
 
