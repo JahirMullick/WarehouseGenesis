@@ -40,3 +40,549 @@ body {
     width: calc(100% - 80px);
     left: 80px;
 }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+:root {
+    --blue: #287bff;
+    --white: #fff;
+    --grey: #f5f5f5;
+    --black1: #222;
+    --black2: #999;
+    --sky: #0AA1DD;
+    --purple: #4D4C7D;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+.main {
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background: var(--white);
+    transition: 0.5s;
+}
+
+.main.active {
+    width: calc(100% - 80px);
+    left: 80px;
+}
+
+
+
+
+
+
+.details {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid; 
+    grid-template-columns: 1.2fr 1.8fr;
+    grid-gap: 30px;
+}
+
+.details .recentOrders {
+    position: relative;
+    display: grid; 
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px #d9d9d9;
+    border-radius: 20px;
+    width: 100%;
+    height: 85vh;
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    float: left;
+    width: 70%;
+}
+.status_div{
+    float: right;
+    width: 30%;
+}
+
+.cardHeader h2 {
+    font-weight: 600;
+    color: var(--blue);
+}
+
+.status_div h2{
+    font-weight: 600;
+    color: var(--blue);
+}
+
+
+
+/* .online {
+    padding: 2px 4px;
+    background: #8de02c;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.active {
+    padding: 2px 4px;
+    background: #f9ca3f;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.ofline {
+    padding: 2px 4px;
+    background: #f00;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+} */
+
+
+/* driver list divition design */
+.driver_list {
+    position: relative;
+    display: grid;
+    min-height: 500px;
+    padding: 20px;
+    background: var(--white);
+    box-shadow: 0 7px 25px #d9d9d9;
+    border-radius: 20px;
+    width: 100%;
+    height: 85vh;
+}
+
+/* driver list name hedding design */
+.table_head_name{
+    padding-left: 31%;
+    width: 50%;
+    float: left;
+    color: var(--blue)
+}
+
+/* driver list status hedding design */
+.table_head_status{
+    float: right;
+    width: 50%;
+    padding-left: 25%;
+    color: var(--blue);
+}
+
+/* image divition design for driver list */
+.imgBx {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+/* image design for driver list */
+.imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* table body design for driver list */
+.tbody {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.driver_list table tr td {
+    padding: 12px 10px;
+}
+
+.driver_list table tr td h4 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2em;
+}
+
+.driver_list table tr td h4 span {
+    font-size: 14px;
+    color: var(--black2);
+}
+
+.driver_list table tbody tr:hover {
+    background: var(--blue);
+    color: var(--white);
+}
+
+.driver_list table tr:hover td h4 span {
+    color: var(--white);
+}
+
+/* add scroll for driver list */
+#table_table{
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+/* Now make it responsive design */
+@media (max-width: 991px) {
+    
+
+    .main {
+        width: 100%;
+        left: 0;
+    }
+
+    .main.active {
+        left: 300px;
+    }
+
+    .cardBox {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .status.inprogress {
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .details {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .recentOrders {
+        overflow-x: auto;
+    }
+
+    .status.inprogress {
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .cardBox {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .cardHeader h2 {
+        font-size: 20px;
+    }
+
+    .user {
+        min-width: 40px;
+    }
+
+    .navigation {
+        width: 100%;
+        left: -100%;
+        z-index: 1000;
+    }
+
+    .navigation.active {
+        width: 100%;
+        left: 0;
+    }
+
+    .toggle {
+        z-index: 10001;
+    }
+
+    .main.active .toggle {
+        position: fixed;
+        right: 0;
+        left: initial;
+        color: var(--white);
+    }
+}
+
+
+
+.table_head{
+    float: left;
+    width: 33.3%;
+}
+
+
+/* add style for form */
+.driver_details_divition_driver{
+    /* background-color: #0AA1DD; */
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    height: 600px; 
+    padding-top: 100px;
+}
+/* .driver_details_divition_driver{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 600px;
+    width: 500px; */
+    /* overflow: hidden; */
+    /* background-color: #0AA1DD; */
+    /* height: 90%; */
+    /* padding-top: 30%; */
+/* } */
+
+/* .driver_details_divition_driver img{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10%;
+} */
+
+.lable-lable{
+    float: left;
+    width: 35%;
+    padding-top: 5px;
+}
+.lable-lable label{
+    padding-top: 7px;
+    color: var(--blue);
+    font-size: large;
+}
+/* .divition label{
+    float: left;
+    color: var(--blue);
+} */
+
+.output_output{
+    float: right;
+    width: 65%;
+}
+
+.divition{
+    padding: 30px;
+}
+/* .divition{
+    margin-top: -13px;
+    margin-bottom: 10px;
+    width: 60%;
+    align-items: center;
+    padding: 5px;
+    opacity: 0.8;
+    background-color: #0AA1DD;
+    padding-top: 0%;
+} */
+.output{
+    height: 40px;
+    font-size: large;
+}
+
+/* .output{
+    height: 50px;
+    width: 100%;
+    background: none;
+    font-size: larger;
+    background: #fff;
+    border: none;
+    border-radius: 5%;
+} */
+
+/* .driver_logo_logo{
+    position: absolute;
+    top: 30px;
+    height: auto;
+    width: 100%;
+} */
+
+.driver_details_divition{
+    padding-top: 20px;
+}
+/* .driver_details_divition_driver .driver_details_divition{
+    position: absolute;
+    top: 52%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    height: 400px;
+    width: 400px;
+    text-align: center;
+    padding-top: 90px;
+} */
+
+.driver_logo_divition{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    left: 52%;
+    box-shadow: 0px 0px 2px #5f5f5f, 0px 0px 0px 5px #f5f5f9,
+     8px 8px 15px #a7aaaf, -8px -8px 15px rgb(248, 248, 251);
+}
+
+.driver_logo_divition img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.actiono{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+    background: #287bff;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+.actiono span{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f5f5f5;
+    font-size: 2em;
+    transition: 0.3s;
+}
+
+.actiono.active span{
+    transform: rotate(135deg);
+}
+
+.actiono ul{
+    position: absolute;
+    bottom: 55px;
+    border: 2px solid rgb(254, 252, 252);
+    padding: 7px 5px 7px 10px;
+    border-radius: 20px;
+    background: rgb(109, 104, 104);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+.actiono ul li{
+    list-style: none;
+    padding: 7px 0;
+}
+.actiono.active ul{
+    /* position: fixed; */
+    bottom: 60px;
+    opacity: 1;
+    visibility: visible;
+    transition: 0.3s;
+}
+.actiono.active ul li{
+    list-style: none;
+    padding: 7px 0;
+    transition: 0.3s;
+}
+.actiono ul li:hover{
+    font-weight: 500;
+}
+.actiono ul li:not(:last-child){
+    border-bottom: 1px solid rgba(253, 251, 251, 0.801);
+}
+.actiono ul li ion-icon{
+    margin-right: 7px;
+    font-size: 1.5em;
+    opacity: 100;
+}
+
+
+
+#add_icon:hover{
+    color: #8de02c;
+}
+#update_icon:hover{
+    color: #f9ca3f;
+}
+#delete_icon:hover{
+    color: #f00;
+}
+
+
+/* popup window style include */
+.popup .overlay{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    z-index: 1;
+    display: none;
+}
+
+.popup .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: rgb(185, 171, 219);
+    width: 450px;
+    height: 220px;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.popup .close-btn{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background: rgb(248, 4, 4);
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.popup.active .content{
+    display: block;
+}
+
+.popup.active .content{
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.content h1{
+    padding-top: 50px;
+}
+/* end of popup window style  */
