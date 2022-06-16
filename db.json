@@ -8,36 +8,143 @@
   ],
   "vehicles": [
     {
-      "id": 1,
-      "name": "Tesla Cyber Truck",
-      "size": "8ft",
-      "capacity": "100 Tons",
-      "status": "Available"
+      "model": "Tata Motors",
+      "company": "ALLCARGO LOGISTICS LTD",
+      "capacity": "111 tons",
+      "registration_number": "7484737238",
+      "picture": "/resources/truck1.jpg",
+      "id": 1
     },
     {
       "id": 2,
-      "name": "Tata Intra V10 Pickup",
-      "Brand": "Tata",
-      "Power": "44 HP",
-      "Fuel": "Diesel",
-      "Engine Cylinders": "2",
-      "No. of Tyre": "4",
-      "GVW": "2120 KG",
-      "Payload": "1000 KG",
-      "status": "On Trip"
+      "model": "Ashok Leyland",
+      "company": "Aqua Logistics Ltd",
+      "capacity": "200 tons",
+      "registration_number": 5457687970,
+      "picture": "/resources/truck2.jpg",
+      "status": "InProgress"
     },
     {
       "id": 3,
-      "name": "Tata T.10 Ultra Truck",
-      "Brand": "Tata",
-      "Power": "123 HP",
-      "Fuel": "Diesel",
-      "Fuel Tank": "160 Ltr.",
-      "Engine": "3300 CC",
-      "GVW": "9600 KG",
-      "No. of Tyre": "6",
-      "Payload": "N/A",
-      "status": " Not Available"
+      "model": "Mahindra & Mahindra",
+      "company": "Arshiya Limited",
+      "capacity": "300 tons",
+      "registration_number": 3560909,
+      "picture": "/resources/truck3.jpg",
+      "status": "Availabel"
+    },
+    {
+      "id": 4,
+      "model": "Eicher Motors",
+      "company": "ASIS LOGISTICS LIMITED",
+      "capacity": "250 tons",
+      "registration_number": 80906545,
+      "picture": "/resources/truck4.jpg",
+      "status": "OnTrip"
+    },
+    {
+      "id": 5,
+      "model": "Asia Motor Works",
+      "company": "AUTORIDERS INTERNATIONAL LTD",
+      "capacity": "310 tons",
+      "registration_number": 879088775,
+      "picture": "/resources/truck5.jpg",
+      "status": "NotAvailabel"
+    },
+    {
+      "id": 6,
+      "model": "Hindustan Motors",
+      "company": "BLUE DART EXPRESS LTD",
+      "capacity": "230 tons",
+      "registration_number": 909845564,
+      "picture": "/resources/truck6.jpg",
+      "status": "OnTrip"
+    },
+    {
+      "id": 7,
+      "model": "Force Motors",
+      "company": "Containerway international Ltd",
+      "capacity": "400 tons",
+      "registration_number": 74834789,
+      "picture": "/resources/truck7.jpg",
+      "status": "InProgress"
+    },
+    {
+      "id": 8,
+      "model": "Bharat Benz",
+      "company": "CORPORATE COURIER AND CARGO LTD",
+      "capacity": "410 tons",
+      "registration_number": 235687980,
+      "picture": "/resources/truck8.jpg",
+      "status": "OnTrip"
+    },
+    {
+      "id": 9,
+      "model": "Volvo Trucks",
+      "company": "DJ Mediaprint & Logistics Ltd",
+      "capacity": "430 tons",
+      "registration_number": 7889809343,
+      "picture": "/resources/truck9.jpg",
+      "status": "Availabel"
+    },
+    {
+      "id": 10,
+      "model": "Swaraj Mazad-SML ISUZU",
+      "company": "East West Holdings Ltd",
+      "capacity": "260 tons",
+      "registration_number": 8942356,
+      "picture": "/resources/truck3.jpg",
+      "status": "Availabel"
+    },
+    {
+      "id": 11,
+      "model": "Tata Signa 4225.T truck",
+      "company": "ELBEE SERVICES LTD",
+      "capacity": "470 tons",
+      "registration_number": 68780243,
+      "picture": "/resources/truck11.jpg",
+      "status": "NotAvailabel"
+    },
+    {
+      "id": 12,
+      "model": "Ashok Leyland Ecomet 1615 HE Truck",
+      "company": "Ashok Leyland Ecomet 1615 HE Truck",
+      "capacity": "378 tons",
+      "registration_number": 2376879878,
+      "picture": "/resources/truck12.jpg",
+      "status": "Availabl"
+    },
+    {
+      "id": 13,
+      "model": "Mahindra Boloero Pikup 4*4 Pickup",
+      "company": "GATEWAY DISTRIPARKS LTD",
+      "capacity": "500 tons",
+      "registration_number": 1356789,
+      "picture": "/resources/truck13.jpg",
+      "status": "OnTrip"
+    },
+    {
+      "id": 14,
+      "model": "Ashok Leyland Ecomet 1615 HE Truck",
+      "company": "Ashok Leyland Ecomet 1615 HE Truck",
+      "capacity": "378 tons",
+      "registration_number": 2376879878,
+      "picture": "/resources/truck12.jpg",
+      "status": "OnTrip"
+    },
+    {
+      "model": "Volvo Trucks",
+      "company": "DJ Mediaprint & Logistics Ltd",
+      "capacity": "450 tons",
+      "registration_number": "7889809343",
+      "id": 15
+    },
+    {
+      "model": "Hindustan",
+      "company": " DART EXPRESS LTD",
+      "capacity": "240 tons",
+      "registration_number": "9098455899",
+      "id": 16
     }
   ],
   "driver": [

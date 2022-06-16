@@ -1,121 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <title>Vehicle</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
     <link rel="stylesheet" href="/CSS/vehicle.css">
 
-    <script src="/JS/Vehicle.js"></script>
+    <title>Trucks</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
 </head>
 
+<body>
 
-<div class="details">
-    <!-- order details list -->
-    <div class="recentOrders">
-        <div class="cardHeader">
-            <h2>Vehicle List</h2>
-            <a href="#" class="btn">View All</a>
+    <!-- create truck's list and detail's divition -->
+    <div class="details">
+    
+        <!-- truck's list divition -->
+        <div class="truck_list">
+
+            <!-- create a truck's list title divition -->
+            <div class="cardHeader">
+                <h2>truck's list</h2>
+                
+            </div>
+            <!-- end of truck's list title divition -->
+            <div class="username">
+                <!-- <div class="table_header">
+                    <div class="table_head_name">Name</div>
+                    <div class="table_head_status">Status</div>
+                </div> -->
+
+
+                <!-- create a table for truck's list -->
+                <!-- <div id="table_table">
+                    <table class="tbody" id="truck-list-table">
+
+                        <tbody id="body">
+
+                        </tbody>
+                        
+                    </table>
+                </div> -->
+
+
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Name</td>
+                            
+                            <td>Status</td>
+                        </tr>
+                    </thead>
+
+                    <tbody id="body">
+
+                    </tbody>
+
+                </table>
+                <!-- end of truck's list table -->
+            </div>
         </div>
-        <table>
-            <thead>
-                <tr>
-                    <td>Name</td>
-                    <!-- <td>Size</td> -->
-                    <!-- <td>Capacity</td> -->
-                    <td>Status</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr id="1" onclick="Get_Request()">
-                    <td>Tesla Cyber Truck</td>
+        <!-- end of truck's list divition -->
 
-                    <td><span class="status available">Available</span></td>
-                </tr>
 
-                <tr id="2">
-                    <td>Tata Intra V10 Pickup</td>
+        <!-- create a main truck details divition -->
+        <div class="recentOrders">
 
-                    <td><span class="status On-Trip">On-Trip</span></td>
-                </tr>
-                <tr id="3">
-                    <td>Tata T.10 Ultra Truck</td>
+            <!-- create a title divition of truck details divition -->
+            <div class="cardHeader">
+                <h2>Truck Details</h2>
+            </div>
+            <!-- end of title divition of truck details divition -->
+            
+            <!-- create a truck detail's divition -->
+            <div class="truck_details_divition_truck">
 
-                    <td><span class="status not-available">Not-Available</span></td>
-                </tr>
-                <tr>
-                    <td>Hp Laptop</td>
+                <!-- create a form -->
+                <form id="form">
+                    <div class="truck_logo_logo">
 
-                    <td><span class="status inprogress">In Progress</span></td>
-                </tr>
-                <tr>
-                    <td>Apple Watch</td>
+                        <!-- create a divition for truck logo -->
+                        <div class="truck_logo_divition">
+                            <!-- <img id="truck_profile_picture" src= ""> -->
+                            <!-- <input img type="file" id="truck_profile_picture" accept="image/jpg , image/png"> -->
+                        </div>
+                        <!-- end of truck logo divition -->
 
-                    <td><span class="status available">Available</span></td>
-                </tr>
-                <tr>
-                    <td>Wall Fan</td>
+                    </div>
 
-                    <td><span class="status On-Trip">On-Trip</span></td>
-                </tr>
-                <tr>
-                    <td>Adidas Shoes</td>
 
-                    <td><span class="status not-available">Not-Available</span></td>
-                </tr>
-                <tr>
-                    <td>Nike Shoes</td>
+                    <div class="truck_details_divition">
 
-                    <td><span class="status inprogress">In Progress</span></td>
-                </tr>
-                <tr>
-                    <td>Macbook Pro 16 inc</td>
+                        <!-- create a truck id divition -->
+                        <div id="id_divition" class="divition">
+                            <input type="number" id="truck_id" class="output" placeholder="Truck ID"  readonly="readonly">
+                        </div>
+                        <!-- end of truck id divition -->
 
-                    <td><span class="status On-Trip">On-Trip</span></td>
-                </tr>
-                <tr>
-                    <td>Ps5</td>
-                    <td><span class="status On-Trip">On-Trip</span></td>
-                </tr>
-                <!-- <tr>
-                                <td>Denim Shirts</td>
-                                <td><span class="status inprogress">In Progress</span></td>
-                            </tr> -->
-            </tbody>
-        </table>
+                        <!-- create a truck model divition -->
+                        <div id="model_divition" class="divition">
+                            <input type="text" id="model" class="output" placeholder="Model" readonly="readonly">
+                        </div>
+                        <!-- end of truck model divition -->
+
+                        <!-- create a truck company divition -->
+                        <div id="company_divition" class="divition">
+                            <input type="text" id="company" class="output" placeholder="Company" readonly="readonly">
+                        </div>
+                        <!-- end of truck company divition -->
+
+                        <!-- create a capacity divition -->
+                        <div id="capacity_divition" class="divition">
+                            <input type="text" id="capacity" class="output" placeholder="Capacity" readonly="readonly">
+                        </div>
+                        <!-- end of capacity divition -->
+
+                        <!-- create a truck registration number divition -->
+                        <div id="registration_number_divition" class="divition">
+                            <input type="text" id="registration_number" class="output" placeholder="Registration Number" readonly="readonly">
+                        </div>
+                        <!-- end of truck registration number divition -->
+                    </div>
+    
+                </form>
+                <!-- end of form -->  
+
+            </div>
+            <!-- end of truck detail's divition -->
+
+            <!-- create truck add, update, delete divition -->
+            <div class="actiono" onclick="actionToggle()">
+                <span><ion-icon name="add-outline"></ion-icon></span>
+                <ul>
+                    <li onclick="add()">
+                        <ion-icon name="add-outline" id="add_icon"></ion-icon>
+                    </li>
+                    <li onclick="update()">
+                        <ion-icon name="cloud-upload-outline" id="update_icon"></ion-icon>
+                    </li>
+                    <li onclick="delet()">
+                        <ion-icon name="trash-outline" id="delete_icon"></ion-icon>
+                    </li>
+                </ul>
+            </div>
+            <!-- end of truck add, update, delete divition -->
+            
+        </div>
+        <!-- end of main truck detail's divition -->
+
     </div>
+    <!-- end of truck's list and detail's divition -->
 
-    <!-- New Customers -->
-    <div class="recentCustomers">
-        <div class="cardHeader">
-            <h2>Vehical Details</h2>
-        </div>
-        <div class="pic">
-            <img src="/resources/Truck/Tata Intra V10 Pickup.jpg">
-        </div>
-        <div class="VDetails">
-            <textarea id="vd" class="Vdetails" cols="30" rows="10" readonly></textarea>
-            <!-- <input id="vd" class="Vdetails" cols="30" rows="10" readonly> -->
-        </div>
+</body>
+<script src="/JS/Vehicle.js"></script>
 
-    </div>
-
-    <div class="actiono" onclick="actionToggle()">
-        <span>
-            <ion-icon name="add-outline"></ion-icon>
-        </span>
-        <ul>
-            <li>
-                <ion-icon name="add-outline"></ion-icon>
-            </li>
-            <li>
-                <ion-icon name="cloud-upload-outline"></ion-icon>
-            </li>
-            <li>
-                <ion-icon name="trash-outline"></ion-icon>
-            </li>
-        </ul>
-    </div>
-    <script type="text/javascript">
-        function actionToggle() {
-            var action = document.querySelector('.actiono');
-            action.classList.toggle('active')
-        }
-    </script>
-</div>
+</html>
