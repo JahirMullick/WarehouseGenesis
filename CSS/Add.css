@@ -9,8 +9,16 @@
     padding: 20px 10px 20px 5px;
 }
 
-.username {
-    margin-top: -13px;
+.recentOrders .username {
+    margin-top: -31px;
+    padding: 10px 20px;
+    height: 420px;
+    margin-bottom: 35px;
+    border-radius: 25px;
+    box-shadow: rgb(203 206 209) 8px 8px 8px inset, rgb(203 206 209) -8px -8px 8px inset;
+}
+.recentCustomers .username {
+    margin-top: 32px;
     padding: 10px 20px 10px 20px;
     margin-bottom: 35px;
     border-radius: 25px;
