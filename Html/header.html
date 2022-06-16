@@ -55,7 +55,7 @@
             <li onclick="dasboardPage()">
                 <a>
                     <span class="icon"><span class="material-symbols-outlined">
-                            home_app_logo </span>
+                        home_app_logo </span>
                     </span>
                     <span class="title">Dashboard</span>
                 </a>
@@ -155,8 +155,12 @@
                 <div class="cardBox">
                     <div class="card">
                         <div>
-                            <div class="numbers">10</div>
+                            <div class="que_trip">
+
+                                <!-- <div class="numbers">10</div> -->
+                            </div>
                             <div class="cardName">Trips</div>
+
                         </div>
                         <div class="iconBx">
                             <ion-icon name="eye-outline"></ion-icon>
@@ -165,7 +169,7 @@
                     <div class="card">
                         <div>
                             <div class="numbers">3572</div>
-                            <div class="cardName">Transports</div>
+                            <div class="cardName">Goods weight</div>
                         </div>
                         <div class="iconBx">
                             <ion-icon name="cart-outline"></ion-icon>
@@ -173,8 +177,11 @@
                     </div>
                     <div class="card">
                         <div>
-                            <div class="numbers">10</div>
+                            <div class="que_Driver">
+                                <!-- <div class="numbers" id="d_No"><span>10</span></div> -->
+                            </div>
                             <div class="cardName">Drivers</div>
+
                         </div>
                         <span class="iconBx">
                             <ion-icon name="people-outline"></ion-icon>
@@ -182,11 +189,14 @@
                     </div>
                     <div class="card">
                         <div>
-                            <div class="numbers">$8358</div>
-                            <div class="cardName">Earning</div>
+                            <div class="que_Vehicles">
+
+                                <!-- <div class="numbers">$8358</div> -->
+                            </div>
+                            <div class="cardName">Vehicles</div>
                         </div>
                         <div class="iconBx">
-                            <ion-icon name="cash-outline"></ion-icon>
+                            <ion-icon name="car-sport-outline"></ion-icon>
                         </div>
                     </div>
                 </div>
@@ -209,73 +219,75 @@
                                         <td>Status</td>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
+
+
+                                <tbody id="body">
+                                    <!-- <tr>
                                         <td>INDIA</td>
                                         <td>USA</td>
-                                        <td>5 Tons</td>
+                                        <td>5 Ton</td>
                                         <td><span class="status delivered">Delivered</span></td>
                                     </tr>
                                     <tr>
                                         <td>INDIA</td>
                                         <td>CHINA</td>
-                                        <td>10 Tons</td>
+                                        <td>10 Ton</td>
                                         <td><span class="status pending">Pending</span></td>
                                     </tr>
                                     <tr>
                                         <td>INDIA</td>
                                         <td>USA</td>
-                                        <td>7 Tons</td>
+                                        <td>7 Ton</td>
                                         <td><span class="status return">Return</span></td>
                                     </tr>
                                     <tr>
                                         <td>CHINA</td>
                                         <td>USA</td>
-                                        <td>12 Tons</td>
+                                        <td>12 Ton</td>
                                         <td><span class="status inprogress">In Progress</span></td>
                                     </tr>
                                     <tr>
                                         <td>INDIA</td>
                                         <td>CHINA</td>
-                                        <td>11 Tons</td>
+                                        <td>11 Ton</td>
                                         <td><span class="status delivered">Delivered</span></td>
                                     </tr>
                                     <tr>
                                         <td>DUBAI</td>
                                         <td>FRANCE</td>
-                                        <td>50 Tons</td>
+                                        <td>50 Ton</td>
                                         <td><span class="status pending">Pending</span></td>
                                     </tr>
                                     <tr>
                                         <td>INDIA</td>
                                         <td>FRANCE</td>
-                                        <td>30 Tons</td>
+                                        <td>30 Ton</td>
                                         <td><span class="status return">Return</span></td>
                                     </tr>
                                     <tr>
                                         <td>USA</td>
                                         <td>INDIA</td>
-                                        <td>3 Tons</td>
+                                        <td>3 Ton</td>
                                         <td><span class="status inprogress">In Progress</span></td>
                                     </tr>
                                     <tr>
                                         <td>USA</td>
                                         <td>INDIA</td>
-                                        <td>20 Tons</td>
+                                        <td>20 Ton</td>
                                         <td><span class="status pending">Pending</span></td>
                                     </tr>
                                     <tr>
                                         <td>DUBAI</td>
                                         <td>INDIA</td>
-                                        <td>11 Tons</td>
+                                        <td>11 Ton</td>
                                         <td><span class="status pending">Pending</span></td>
                                     </tr>
                                     <tr>
                                         <td>ITALY</td>
                                         <td>USA</td>
-                                        <td>15 Tons</td>
+                                        <td>15 Ton</td>
                                         <td><span class="status inprogress">In Progress</span></td>
-                                    </tr>
+                                    </tr> -->
                                 </tbody>
                             </table>
                         </div>
@@ -371,8 +383,9 @@
         list.forEach((item) =>
             item.addEventListener('click', activeLink));
     </script>
-    <!-- <script src="/JS/redirectPage.js"></script> -->
 
+    <!-- Specify type="module" for access json file using import function. -->
+    <script type="module" src="/JS/header.js"></script>
 </body>
 
 </html>
