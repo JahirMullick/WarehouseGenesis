@@ -6,11 +6,157 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="/CSS/vehicle.css">
     <link rel="stylesheet" href="/CSS/trip.css">
     <title>Trip</title>
 </head>
+
 <body>
-    
-<h1>Helo World!</h1>
+
+    <!-- create truck's list and detail's divition -->
+    <div class="details">
+
+        <!-- truck's list divition -->
+        <div class="truck_list">
+
+            <!-- create a truck's list title divition -->
+            <div class="cardHeader">
+                <h2>Trip list</h2>
+
+            </div>
+            <!-- end of truck's list title divition -->
+            <div class="username">
+                <!-- <div class="table_header">
+                    <div class="table_head_name">Name</div>
+                    <div class="table_head_status">Status</div>
+                </div> -->
+
+
+                <!-- create a table for truck's list -->
+                <!-- <div id="table_table">
+                    <table class="tbody" id="truck-list-table">
+
+                        <tbody id="body">
+
+                        </tbody>
+                        
+                    </table>
+                </div> -->
+
+
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Source</td>
+
+                            <td>Destination</td>
+
+                            <td>Status</td>
+                        </tr>
+                    </thead>
+
+                    <tbody id="body">
+
+                    </tbody>
+
+                </table>
+                <!-- end of truck's list table -->
+            </div>
+        </div>
+        <!-- end of truck's list divition -->
+
+
+        <!-- create a main truck details divition -->
+        <div class="recentOrders">
+
+            <!-- create a title divition of truck details divition -->
+            <div class="cardHeader">
+                <h2>Trip Details</h2>
+            </div>
+            <!-- end of title divition of truck details divition -->
+
+            <!-- create a truck detail's divition -->
+            <div class="trip_details_divition_trip">
+
+                <form action="">
+                    <div>
+                        <label>Trip Id</label>
+                        <input type="text" id="trip_id" class="divitio" placeholder="Trip Id" required="" style="
+    margin-left: 43px;">
+                    </div>
+                    <div>
+                        <label>Source</label>
+                        <input type="text" id="truck_id" class="divitio" placeholder="Source" required="" style="
+    margin-left: 39px;">
+                    </div>
+
+                    <div>
+                        <label>Destination</label>
+                        <input type="text" id="model" class="divitio" placeholder="Destination" required>
+                    </div>
+                    <div>
+
+                        <label>Distance</label>
+                        <input type="text" id="company" class="divitio" placeholder="Distance" required="" style="
+    margin-left: 24px;">
+                    </div>
+                    <div>
+
+                        <label>Driver</label>
+                        <input type="text" id="adriver" class="divitio" placeholder="Driver" required="" style="
+    margin-left: 44px;">
+                    </div>
+                    <div>
+
+                        <label>Vehicle</label>
+                        <input type="text" id="avehicle" class="divitio" placeholder="Vehicle" required="" style="
+    margin-left: 35px;">
+                    </div>
+                    <div>
+
+                        <label>Time</label>
+                        <input type="text" id="capacity" class="divitio" placeholder="Expected Time" required="" style="
+    margin-left: 54px;">
+                    </div>
+                    <div>
+
+                        <label>Status</label>
+                        <input type="text" id="registration_number" class="divitio" placeholder="Status" required="" style="
+    margin-left: 43px;">
+                    </div>
+
+                    <!-- <button class="button" type="submit">Submit</button> -->
+                </form>
+
+            </div>
+            <!-- end of truck detail's divition -->
+
+            <!-- create truck add, update, delete divition -->
+            <div class="actiono" onclick="actionToggle()">
+                <span>
+                    <ion-icon name="add-outline"></ion-icon>
+                </span>
+                <ul>
+                    <li onclick="add()">
+                        <ion-icon name="add-outline" id="add_icon"></ion-icon>
+                    </li>
+                    <li onclick="update()">
+                        <ion-icon name="cloud-upload-outline" id="update_icon"></ion-icon>
+                    </li>
+                    <li onclick="delet()">
+                        <ion-icon name="trash-outline" id="delete_icon"></ion-icon>
+                    </li>
+                </ul>
+            </div>
+            <!-- end of truck add, update, delete divition -->
+
+        </div>
+        <!-- end of main truck detail's divition -->
+
+    </div>
+    <!-- end of truck's list and detail's divition -->
+
+    <script src="/JS/trip.js"></script>
 </body>
+
 </html>
