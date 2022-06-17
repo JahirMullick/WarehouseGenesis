@@ -11,7 +11,7 @@ function Get_Request() {
     request.onload = function () {
         if (request.response != "[]") {
             //   This line open the admin dashboard page if the condition is true.
-            window.location.href = "/Html/admin dashboard.html";
+            window.location.href = "/Html/header.html";
         }
         else {
             let message = document.getElementById("message");
