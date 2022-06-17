@@ -1,94 +1,173 @@
 
-const request = new XMLHttpRequest();
 
-function Get_Request() {
-    
-    document.getElementById("1").addEventListener("click", add_Url1);
-    document.getElementById("2").addEventListener("click", add_Url2);
-    document.getElementById("3").addEventListener("click", add_Url3);
 
-    function add_Url1(){
-    let id_data = 1;
-    request.open("GET", `http://localhost:3000/vehicles/${id_data}`);
-    request.send();
-    }
-    function add_Url2(){
-    let id_data = 2;
-    request.open("GET", `http://localhost:3000/vehicles/${id_data}`);
-    request.send();
-    }
-    function add_Url3(){
-    let id_data = 3;
-    request.open("GET", `http://localhost:3000/vehicles/${id_data}`);
-    request.send();
-    }
+
+
+// data fetch for truck list table
+fetch("http://localhost:3000/vehicles")
+.then((res) => res.json())
+.then((data) => {
+    console.log(data)
+
+    // onclick="truck_details()"
+    data.forEach((user) => {
+        $("#body").append(`
+
+            <tr id=${user.id} onclick="truck_details(${user.id})">
+                <td>
+                    ${user.model}
+                </td>
+                <td>
+                    ${user.status}
+                </td>
+            </tr>
+        
+
+        
+        `)
+        
+    });
+})
+
+function truck_details(x){
+    fetch("http://localhost:3000/vehicle/"+ x)
+    .then((res) => res.json())
+    .then((data) => {
+        console.log(data)
+
+        let json = data;
+
+        // let truck_picture = json.picture;
+        let truck_id = json.id;
+        let truck_model = json.model;
+        let truck_company = json.company;
+        let truck_capacity = json.capacity;
+        let truck_registration_number = json.registration_number;
+
+        // document.getElementById("src").value = truck_picture;
+        document.getElementById("truck_id").value = truck_id;
+        document.getElementById("model").value = truck_model;
+        document.getElementById("company").value = truck_company;
+        document.getElementById("capacity").value = truck_capacity;
+        document.getElementById("registration_number").value = truck_registration_number;
+        
+    });
     
-    
+}
+
+
+
+
+
+
+function actionToggle(){
+    var action = document.querySelector('.actiono');
+    action.classList.toggle('active')
+
+    // teXt area are readonly to editable
+    document.getElementById("truck_id").readOnly = false;
+    document.getElementById("model").readOnly = false;
+    document.getElementById("company").readOnly = false;
+    document.getElementById("capacity").readOnly = false;
+    document.getElementById("registration_number").readOnly = false;
+}
+
+
+// truck add function
+function add() {
+    const request = new XMLHttpRequest();
+    var model = document.getElementById('model').value;
+    var company = document.getElementById('company').value;
+    var capacity = document.getElementById('capacity').value;
+    var registration_number = document.getElementById('registration_number').value;
+
+    let data = '{"model": "'+ model +'","company": "'+ company +'", "capacity": "'+ capacity +'","registration_number": "'+ registration_number +'"}';
+    request.open("POST", "http://localhost:3000/truck");
+    request.setRequestHeader('Content-Type', 'application/json')
+    request.send(data);
+
     request.onload = function () {
-        if (request.status == 200) {
-            console.log("All Data fatched successfully.");
-            document.getElementById('vd').value = request.response;
+        if (request.status == 201) {
+            console.log("Successfully");
             console.log(request.response);
         }
         else {
             console.log("Wrong URL!");
         }
     }
+
+    // teXt area are editable to readonly
+    // document.getElementById("driver_id").readOnly = true;
+    // document.getElementById("name").readOnly = true;
+    // document.getElementById("address").readOnly = true;
+    // document.getElementById("phone_number").readOnly = true;
+    // document.getElementById("pincode").readOnly = true;
+    // document.getElementById("licence_number").readOnly = true;
+    
 }
 
 
-// function Post_Request() {
 
-//     let data = (document.getElementById('com').value);
-//     request.open("POST", "http://localhost:3000/student");
-//     request.setRequestHeader('Content-Type', 'application/json')
-//     request.send(data);
+// truck update function
 
-//     request.onload = function () {
-//         if (request.status == 201) {
-//             console.log("Post request send successfully");
-//             document.getElementById('comments1').value = request.response;
-//         }
-//         else {
-//             console.log("Wrong URL!");
-//         }
-//     }
-// }
+function update(){
+    const request = new XMLHttpRequest();
+
+    var truck_model = (document.getElementById('model').value);
+    var truck_company = (document.getElementById('company').value);
+    var truck_capacity = (document.getElementById('capacity').value);
+    var truck_registration_number = (document.getElementById('registration_number').value);
+    var truck_id = (document.getElementById('truck_id').value);
+
+    let data = '{"model": "'+ truck_model +'","company": "'+ truck_company +'", "capacity": "'+ truck_capacity +'","registration_number": "'+ truck_registration_number +'"}';
+
+    request.open("Put", "http://localhost:3000/truck/" + truck_id);
+    request.setRequestHeader('Content-Type', 'application/json')
+    request.send(data);
+
+    request.onload = function () {
+        if (request.status == 200) {
+            console.log("Successfully");
+            console.log(request.response);
+        }
+        else {
+            console.log("Wrong URL!");
+        }
+    }
+
+    // teXt area are editable to readonly
+    // document.getElementById("driver_id").readOnly = true;
+    // document.getElementById("name").readOnly = true;
+    // document.getElementById("address").readOnly = true;
+    // document.getElementById("phone_number").readOnly = true;
+    // document.getElementById("pincode").readOnly = true;
+    // document.getElementById("licence_number").readOnly = true;
+}
 
 
-// function Put_Request() {
-//     let id_input = Number(document.getElementById('giveid').value);
-//     let putData = (document.getElementById('com').value);
-//     request.open("PUT", ("http://localhost:3000/student/" + id_input));
-//     request.setRequestHeader('Content-Type', 'application/json')
-//     request.send(putData);
+// truck delete function
+function delet(){
+    const request = new XMLHttpRequest();
+    let deleteId = (document.getElementById('truck_id').value);
+    request.open("DELETE", ("http://localhost:3000/truck/" + deleteId));
+    request.send();
 
-//     request.onload = function () {
-//         if (request.status == 200) {
-//             console.log("Put request send successfully");
-//             document.getElementById('comments1').value = request.response;
-//         }
-//         else {
-//             console.log("Wrong URL!");
-//         }
-//     }
-// }
+    request.onload = function () {
+        if (request.status == 200) {
+            console.log("Item Deleted");
+            console.log(request.response);
+        }
+        else {
+            console.log("Wrong URL!");
+        }
+    }
 
-
-
-// function Delete_Request() {
-//     let deleteId = (document.getElementById('giveid').value);
-//     request.open("DELETE", ("http://localhost:3000/student/" + deleteId));
-//     request.send();
-
-//     request.onload = function () {
-//         if (request.status == 200) {
-//             console.log("Item Deleted");
-//             document.getElementById('comments1').value = request.response;
-//         }
-//         else {
-//             console.log("Wrong URL!");
-//         }
-//     }
-// }
+    // teXt area are editable to readonly
+    // document.getElementById("driver_id").readOnly = true;
+    // document.getElementById("name").readOnly = true;
+    // document.getElementById("address").readOnly = true;
+    // document.getElementById("phone_number").readOnly = true;
+    // document.getElementById("pincode").readOnly = true;
+    // document.getElementById("licence_number").readOnly = true;
+}
 

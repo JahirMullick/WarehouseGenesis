@@ -7,15 +7,283 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/CSS/driver.css">
     <title>Driver</title>
+    <!-- This is for HTML Header/ Navigation menu -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $('#header').load('/Html/header.html');
+        });
+    </script>
+
+    <!-- This is for HTML Topbar/ top heading -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $('#titlebar').load('/Html/titleBar.html');
+        });
+    </script>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
-   
-<div class="abc">
-    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Illum, id tempora dolorem quo saepe neque tenetur officiis facilis temporibus dignissimos eaque nisi, aliquid recusandae! 
-        Voluptatibus dolore ad corrupti pariatur impedit?</h2>
-</div>
+
+    <!-- create container divition -->
+    <!-- <div class="container"> -->
+
+        <!-- menu divition -->
+        <!-- <div id="header"></div> -->
+        <!-- end of menu divition -->
+
+        <!-- create main divition -->
+        <!-- <div class="main"> -->
+
+            <!-- create title bar divition -->
+            <!-- <div id="titlebar"></div> -->
+            <!-- end of title bar divition -->
+
+
+            <!-- create driver's list and detail's divition -->
+            <div class="details">
+
+                <!-- driver's list divition -->
+                <div class="driver_list">
+
+                    <!-- create a driver's list title divition -->
+                    <div class="cardHeader">
+                        <h2>driver's list</h2>
+
+                    </div>
+                    <!-- end of driver's list title divition -->
+
+                    <div class="table_header">
+                        <div class="table_head_name">Name</div>
+                        <div class="table_head_status">Status</div>
+                    </div>
+
+
+                    <!-- create a table for driver's list -->
+                    <div id="table_table">
+                        <table class="tbody" id="driver-list-table">
+
+                            <tbody id="body">
+
+                            </tbody>
+
+                        </table>
+                    </div>
+                    <!-- end of driver's list table -->
+                </div>
+                <!-- end of driver's list divition -->
+
+
+                <!-- create a main driver details divition -->
+                <div class="recentOrders">
+
+                    <!-- create a title divition of driver details divition -->
+                    <div class="cardHeader">
+                        <h2>Driver Details</h2>
+                    </div>
+                    <!-- end of title divition of driver details divition -->
+
+                    <!-- create a driver detail's divition -->
+                    <div class="driver_details_divition_driver">
+
+                        <!-- create a form -->
+                        <form id="form">
+                            <div class="driver_logo_logo">
+
+                                <!-- create a divition for driver logo -->
+                                <div class="driver_logo_divition">
+                                    <img id="driver_profile_picture" src="/resources/truck_back_ground.jpg">
+                                </div>
+                                <!-- end of driver logo divition -->
+
+                            </div>
+
+
+
+                            <div class="driver_details_divition">
+
+                                <!-- create a driver id divition -->
+                                <div id="id_divition" class="divition">
+                                    <div class="lable-lable">
+                                        <label>driver id </label>
+                                    </div>
+                                    <div class="output_output">
+                                        <input type="number" id="driver_id" class="output" placeholder="Driver ID"
+                                            readonly="readonly" autocomplete="off">
+                                    </div>
+                                </div>
+                                <!-- end of driver id divition -->
+
+                                <!-- create a driver name divition -->
+                                <div id="name_divition" class="divition">
+                                    <div class="lable-lable">
+                                        <label>Name </label>
+                                    </div>
+                                    <div class="output_output">
+                                        <input type="text" id="name" placeholder="Name" class="output"
+                                            readonly="readonly" autocomplete="off">
+                                    </div>
+                                </div>
+                                <!-- end of driver name divition -->
+
+                                <!-- create a driver address divition -->
+                                <div id="address_divition" class="divition">
+                                    <div class="lable-lable">
+                                        <label>Address </label>
+                                    </div>
+                                    <div class="output_output">
+                                        <input type="text" id="address" class="output" placeholder="Address"
+                                            readonly="readonly" autocomplete="off">
+                                    </div>
+                                </div>
+                                <!-- end of driver address divition -->
+
+                                <!-- create a driver phone number divition -->
+                                <div id="phone_number_divition" class="divition">
+                                    <div class="lable-lable">
+                                        <label>Phone Number </label>
+                                    </div>
+                                    <div class="output_output">
+                                        <input type="number" id="phone_number" class="output" placeholder="Phone Number"
+                                            readonly="readonly" autocomplete="off">
+                                    </div>
+                                </div>
+                                <!-- end of driver phone number divition -->
+
+                                <!-- create a pin code divition -->
+                                <div id="pincode_divition" class="divition">
+                                    <div class="lable-lable">
+                                        <label>Pincode </label>
+                                    </div>
+                                    <div class="output_output">
+                                        <input type="number" id="pincode" class="output" placeholder="Pincode"
+                                            readonly="readonly" autocomplete="off">
+                                    </div>
+                                </div>
+                                <!-- end of pin code divition -->
+
+                                <!-- create a driver licence number divition -->
+                                <div id="licence_number_divition" class="divition">
+                                    <div class="lable-lable">
+                                        <label>Licence Number </label>
+                                    </div>
+                                    <div class="output_output">
+                                        <input type="text" id="licence_number" class="output"
+                                            placeholder="Licence Number" readonly="readonly" autocomplete="off">
+                                    </div>
+
+                                </div>
+
+                                <div id="statuus_divition" class="divition">
+                                    <div class="lable-lable">
+                                        <label>Status </label>
+                                    </div>
+                                    <div class="output_output">
+                                        <input type="text" id="status" class="output" placeholder="Status"
+                                            readonly="readonly" autocomplete="off">
+                                    </div>
+
+                                </div>
+                                <!-- end of driver licence number divition -->
+                            </div>
+
+                        </form>
+                        <!-- end of form -->
+
+                    </div>
+                    <!-- end of driver detail's divition -->
+
+                    <!-- create driver add, update, delete divition -->
+                    <div class="actiono" onclick="actionToggle()">
+                        <span>
+                            <ion-icon name="add-outline"></ion-icon>
+                        </span>
+                        <ul>
+                            <li onclick="add()">
+                                <ion-icon name="add-outline" id="add_icon"></ion-icon>
+                            </li>
+                            <li onclick="update()">
+                                <ion-icon name="cloud-upload-outline" id="update_icon"></ion-icon>
+                            </li>
+                            <li onclick="delet()">
+                                <ion-icon name="trash-outline" id="delete_icon"></ion-icon>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end of driver add, update, delete divition -->
+
+
+                    <div class="popup" id="popup-1">
+                        <div class="overlay"></div>
+                        <div class="content">
+                            <div class="close-btn" onclick="add()">&times;</div>
+                            <h1>add successfuly</h1>
+                        </div>
+                    </div>
+
+                    <div class="popup" id="popup-2">
+                        <div class="overlay"></div>
+                        <div class="content">
+                            <div class="close-btn" onclick="add()">&times;</div>
+                            <h1>add not successfuly</h1>
+                        </div>
+                    </div>
+
+                    <div class="popup" id="popup-3">
+                        <div class="overlay"></div>
+                        <div class="content">
+                            <div class="close-btn" onclick="update()">&times;</div>
+                            <h1>update successfuly</h1>
+                        </div>
+                    </div>
+
+                    <div class="popup" id="popup-4">
+                        <div class="overlay"></div>
+                        <div class="content">
+                            <div class="close-btn" onclick="update()">&times;</div>
+                            <h1>update not successfuly</h1>
+                        </div>
+                    </div>
+
+                    <div class="popup" id="popup-5">
+                        <div class="overlay"></div>
+                        <div class="content">
+                            <div class="close-btn" onclick="delet()">&times;</div>
+                            <h1>delete successfuly</h1>
+                        </div>
+                    </div>
+
+                    <div class="popup" id="popup-5">
+                        <div class="overlay"></div>
+                        <div class="content">
+                            <div class="close-btn" onclick="delet()">&times;</div>
+                            <h1>delete not successfuly</h1>
+                        </div>
+                    </div>
+                    <!-- end of popup window -->
+
+                </div>
+                <!-- end of main driver detail's divition -->
+
+            </div>
+            <!-- end of driver's list and detail's divition -->
+
+        <!-- </div> -->
+        <!-- end of main divition -->
+
+    <!-- </div> -->
+    <!-- end of container divition -->
+
+    <script src="/JS/driver.js"></script>
 </body>
 
 </html>
