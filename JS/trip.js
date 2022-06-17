@@ -91,7 +91,7 @@ function add() {
     var driver = document.getElementById('adriver').value;
     var vehicle = document.getElementById('avehicle').value;
 
-    let data = '{"source":"'+ source +'","destination": "'+ destination +'","goods_weight": "'+ distance +'","driver_name":"'+ driver +'","truck_model":"'+ vehicle +'", "time": "'+ ex_Time +'","status": "'+ status +'"}';
+    let data = '{"source":"'+ source +'","destination": "'+ destination +'","goods_weight": '+ distance +',"driver_name":"'+ driver +'","truck_model":"'+ vehicle +'", "time": "'+ ex_Time +'","status": "'+ status +'"}';
     request.open("POST", "http://localhost:3000/trips/");
     request.setRequestHeader('Content-Type', 'application/json')
     request.send(data);
@@ -134,7 +134,7 @@ function update(){
     var ex_Time = document.getElementById('capacity').value;
     var status = document.getElementById('registration_number').value;
 
-    let data = '{"source":"'+ source +'","destination": "'+ destination +'","goods_weight": "'+ distance +'","driver_name":"'+ driver +'","truck_model":"'+ vehicle +'", "time": "'+ ex_Time +'","status": "'+ status +'"}';
+    let data = '{"source":"'+ source +'","destination": "'+ destination +'","goods_weight": '+ distance +',"driver_name":"'+ driver +'","truck_model":"'+ vehicle +'", "time": "'+ ex_Time +'","status": "'+ status +'"}';
 
     request.open("Put", "http://localhost:3000/trips/" + trip_id);
     request.setRequestHeader('Content-Type', 'application/json')

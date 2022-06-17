@@ -267,7 +267,7 @@
     {
       "source": "Panskura",
       "destination": "Kolkata",
-      "goods_weight": "50",
+      "goods_weight": 50,
       "driver_name": "Balak",
       "truck_model": "Force Motors",
       "time": "72 hr",
