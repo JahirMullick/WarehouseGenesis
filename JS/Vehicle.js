@@ -30,7 +30,7 @@ fetch("http://localhost:3000/vehicles")
 })
 
 function truck_details(x){
-    fetch("http://localhost:3000/vehicle/"+ x)
+    fetch("http://localhost:3000/vehicles/"+ x)
     .then((res) => res.json())
     .then((data) => {
         console.log(data)
@@ -82,7 +82,7 @@ function add() {
     var registration_number = document.getElementById('registration_number').value;
 
     let data = '{"model": "'+ model +'","company": "'+ company +'", "capacity": "'+ capacity +'","registration_number": "'+ registration_number +'"}';
-    request.open("POST", "http://localhost:3000/truck");
+    request.open("POST", "http://localhost:3000/vehicles/");
     request.setRequestHeader('Content-Type', 'application/json')
     request.send(data);
 
@@ -121,7 +121,7 @@ function update(){
 
     let data = '{"model": "'+ truck_model +'","company": "'+ truck_company +'", "capacity": "'+ truck_capacity +'","registration_number": "'+ truck_registration_number +'"}';
 
-    request.open("Put", "http://localhost:3000/truck/" + truck_id);
+    request.open("Put", "http://localhost:3000/vehicles/" + truck_id);
     request.setRequestHeader('Content-Type', 'application/json')
     request.send(data);
 
@@ -149,7 +149,7 @@ function update(){
 function delet(){
     const request = new XMLHttpRequest();
     let deleteId = (document.getElementById('truck_id').value);
-    request.open("DELETE", ("http://localhost:3000/truck/" + deleteId));
+    request.open("DELETE", ("http://localhost:3000/vehicles/" + deleteId));
     request.send();
 
     request.onload = function () {

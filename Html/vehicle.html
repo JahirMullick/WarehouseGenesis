@@ -21,14 +21,14 @@
 
     <!-- create truck's list and detail's divition -->
     <div class="details">
-    
+
         <!-- truck's list divition -->
         <div class="truck_list">
 
             <!-- create a truck's list title divition -->
             <div class="cardHeader">
                 <h2>truck's list</h2>
-                
+
             </div>
             <!-- end of truck's list title divition -->
             <div class="username">
@@ -54,7 +54,7 @@
                     <thead>
                         <tr>
                             <td>Name</td>
-                            
+
                             <td>Status</td>
                         </tr>
                     </thead>
@@ -78,66 +78,97 @@
                 <h2>Truck Details</h2>
             </div>
             <!-- end of title divition of truck details divition -->
-            
+
             <!-- create a truck detail's divition -->
             <div class="truck_details_divition_truck">
 
                 <!-- create a form -->
-                <form id="form">
-                    <div class="truck_logo_logo">
+                <!-- <form id="form"> -->
+                <!-- <div class="truck_logo_logo"> -->
 
-                        <!-- create a divition for truck logo -->
-                        <div class="truck_logo_divition">
-                            <!-- <img id="truck_profile_picture" src= ""> -->
-                            <!-- <input img type="file" id="truck_profile_picture" accept="image/jpg , image/png"> -->
-                        </div>
-                        <!-- end of truck logo divition -->
+                <!-- create a divition for truck logo -->
+                <!-- <div class="truck_logo_divition"> -->
+                <!-- <img id="truck_profile_picture" src= ""> -->
+                <!-- <input img type="file" id="truck_profile_picture" accept="image/jpg , image/png"> -->
+                <!-- </div> -->
+                <!-- end of truck logo divition -->
 
-                    </div>
+                <!-- </div> -->
 
 
-                    <div class="truck_details_divition">
+                <!-- <div class="truck_details_divition">
 
-                        <!-- create a truck id divition -->
+                        
                         <div id="id_divition" class="divition">
                             <input type="number" id="truck_id" class="output" placeholder="Truck ID"  readonly="readonly">
                         </div>
-                        <!-- end of truck id divition -->
+                        
 
-                        <!-- create a truck model divition -->
+                        
                         <div id="model_divition" class="divition">
                             <input type="text" id="model" class="output" placeholder="Model" readonly="readonly">
                         </div>
-                        <!-- end of truck model divition -->
+                        
 
-                        <!-- create a truck company divition -->
+                        
                         <div id="company_divition" class="divition">
                             <input type="text" id="company" class="output" placeholder="Company" readonly="readonly">
                         </div>
-                        <!-- end of truck company divition -->
+                        
 
-                        <!-- create a capacity divition -->
+                        
                         <div id="capacity_divition" class="divition">
                             <input type="text" id="capacity" class="output" placeholder="Capacity" readonly="readonly">
                         </div>
-                        <!-- end of capacity divition -->
+                        
 
-                        <!-- create a truck registration number divition -->
+                       
                         <div id="registration_number_divition" class="divition">
                             <input type="text" id="registration_number" class="output" placeholder="Registration Number" readonly="readonly">
                         </div>
-                        <!-- end of truck registration number divition -->
+                        
                     </div>
     
+                </form> -->
+                <!-- end of form -->
+
+                <form action="">
+                    <div>
+                        <label>Truck ID</label>
+                        <input type="text" id="truck_id" class="divition" placeholder="Truck ID" required>
+                    </div>
+
+                    <div>
+                        <label>Model</label>
+                        <input type="text" id="model" class="divition" placeholder="Model" required>
+                    </div>
+                    <div>
+
+                        <label>Company</label>
+                        <input type="text" id="company" class="divition" placeholder="Company" required>
+                    </div>
+                    <div>
+
+                        <label>Capacity</label>
+                        <input type="text" id="capacity" class="divition" placeholder="Capacity" required>
+                    </div>
+                    <div>
+
+                        <label>Registration</label>
+                        <input type="text" id="registration_number" class="divition" placeholder="Registration Number" required>
+                    </div>
+
+                    <!-- <button class="button" type="submit">Submit</button> -->
                 </form>
-                <!-- end of form -->  
 
             </div>
             <!-- end of truck detail's divition -->
 
             <!-- create truck add, update, delete divition -->
             <div class="actiono" onclick="actionToggle()">
-                <span><ion-icon name="add-outline"></ion-icon></span>
+                <span>
+                    <ion-icon name="add-outline"></ion-icon>
+                </span>
                 <ul>
                     <li onclick="add()">
                         <ion-icon name="add-outline" id="add_icon"></ion-icon>
@@ -151,7 +182,7 @@
                 </ul>
             </div>
             <!-- end of truck add, update, delete divition -->
-            
+
         </div>
         <!-- end of main truck detail's divition -->
 
