@@ -265,17 +265,14 @@
   ],
   "trips": [
     {
-      "id": 1,
       "source": "Panskura",
-      "destination": "Dellhi",
-      "distance": "200 km",
+      "destination": "Kolkata",
+      "goods_weight": "50",
+      "driver_name": "Balak",
+      "truck_model": "Force Motors",
       "time": "72 hr",
-      "driver_id": 2,
-      "driver_name": "Bikash Ojha",
-      "truck_id": 3,
-      "truck_registrationno": 216821,
-      "status": "Available",
-      "goods_weight": 23
+      "status": "Delivered",
+      "id": 1
     },
     {
       "id": 2,
@@ -283,38 +280,21 @@
       "destination": "Dellhi",
       "distance": "200 km",
       "time": "72 hr",
-      "driver_id": 2,
       "driver_name": "Bikash Ojha",
-      "truck_id": 3,
-      "truck_registrationno": 216821,
-      "status": "Available",
-      "goods_weight": 45
+      "truck_model": "Force Motors",
+      "truck_regno": 216821,
+      "goods_weight": 39,
+      "status": "Available"
     },
     {
-      "id": 3,
-      "source": "Panskura",
-      "destination": "Dellhi",
-      "distance": "200 km",
-      "time": "72 hr",
-      "driver_id": 2,
+      "source": "Kolkata",
+      "destination": "USA",
+      "goods_weight": 320,
       "driver_name": "Bikash Ojha",
-      "truck_id": 3,
-      "truck_registrationno": 216821,
-      "status": "Available",
-      "goods_weight": 200
-    },
-    {
-      "id": 4,
-      "source": "Panskura",
-      "destination": "Dellhi",
-      "distance": "200 km",
+      "truck_model": "Force Motors",
       "time": "72 hr",
-      "driver_id": 2,
-      "driver_name": "Bikash Ojha",
-      "truck_id": 3,
-      "truck_registrationno": 216821,
-      "status": "Available",
-      "goods_weight": 50
+      "status": "OnTrip",
+      "id": 3
     }
   ]
 }
