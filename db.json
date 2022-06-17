@@ -193,11 +193,11 @@
       "truck_id": 3 ,
       "truck_registrationno": 216821 ,
       "status": "Available",
-      "goods_weight": "23kg" 
+      "goods_weight": 23 
       
     },
     {
-      "trip_id": "2",
+      "id": 2,
       "source": "Panskura",
       "destination": "Dellhi",
       "distance": "200 km",
@@ -207,7 +207,33 @@
       "truck_id": 3 ,
       "truck_registrationno": 216821 ,
        "status": "Available",
-       "goods_weight": "23kg" 
+       "goods_weight": 45 
+    },
+    {
+      "id": 3,
+      "source": "Panskura",
+      "destination": "Dellhi",
+      "distance": "200 km",
+      "time": "72 hr",
+      "driver_id":2 ,
+      "driver_name": "Bikash Ojha",
+      "truck_id": 3 ,
+      "truck_registrationno": 216821 ,
+       "status": "Available",
+       "goods_weight": 200 
+    },
+    {
+      "id": 4,
+      "source": "Panskura",
+      "destination": "Dellhi",
+      "distance": "200 km",
+      "time": "72 hr",
+      "driver_id":2 ,
+      "driver_name": "Bikash Ojha",
+      "truck_id": 3 ,
+      "truck_registrationno": 216821 ,
+       "status": "Available",
+       "goods_weight": 50 
     }
   ]
   
