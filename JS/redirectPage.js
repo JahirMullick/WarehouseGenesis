@@ -8,10 +8,6 @@ function dasboardPage() {
 function driverPage() {
     $('#refresh-section').load('/Html/driver.html');
 };
-function helpPage() {
-    $('#refresh-section').load('/Html/help.html');
-};
-
 function loginPage() {
     window.location = "/Html/LoginForm.html";
 };
