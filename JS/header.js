@@ -1,7 +1,5 @@
-
+//Import db.json from local storage
 import users from '../db.json' assert {type: 'json'};
-// console.log(users.admin[0].password);
-console.log(users);
 
 // Fetch Dashbord Card data start here--->
 
@@ -11,6 +9,7 @@ console.log(users);
 
 // Store total numbers of object in driver_count variable.
 let driver_count = Object.keys(users.driver).length;
+// console.log(driver_count);
 //Select the div that class name que_driver
 const que_Drivertext = document.querySelector(".que_Driver");
 // Write a format in between store the driver_count value. Mean total driver
@@ -36,6 +35,24 @@ que_Drivertext.innerHTML = que_Drivertag;
 //     //This line load the HTML with value in between the que_driver div.    
 //     que_text.innerHTML = que_tag; 
 // }) 
+
+
+// Total Goods weight Count Start here ---------->
+
+
+const abcd = users.trips;
+var res = abcd.map(bill => bill.goods_weight).reduce((acc, amount) => acc + amount);
+console.log('This is res = ',res);
+
+const que_Goodstext = document.querySelector(".que_goods");
+let que_Goodstag = '<div class="numbers" id="d_No"><span>' + res + '</span></div>';   
+que_Goodstext.innerHTML = que_Goodstag;
+
+
+// Total Goods weight Count End here ---------->
+
+
+
 
 
 // Total Trip Count Using Import method--------->
@@ -103,32 +120,12 @@ que_vehiclestext.innerHTML = que_Vehiclestag;
 // Fetch Dashbord Card data End here--->
 
 
-// const request = new XMLHttpRequest();
-
-// request.open("GET", `http://localhost:3000/trips/`);
-// request.send();
-
-// request.onload = function () {
-//     if (request.status == 200) {
-//         console.log("All Data fatched successfully.");
-//         const store = (JSON.parse(request.response));
-//         console.log(store);
-
-//     }
-//     else {
-//         console.log("Wrong URL!");
-//     }
-// }
-
-
-
 // data fetch for driver list table
 fetch("http://localhost:3000/trips")
     .then((res) => res.json())
     .then((data) => {
         console.log(data)
 
-        // onclick="driver_details()"
         data.forEach((user) => {
             $("#body").append(`
 
