@@ -49,22 +49,23 @@
                     </table>
                 </div> -->
 
+                <!-- <div id="vehicle_refresh-section"> -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Name</td>
 
-                <table>
-                    <thead>
-                        <tr>
-                            <td>Name</td>
+                                <td>Status</td>
+                            </tr>
+                        </thead>
 
-                            <td>Status</td>
-                        </tr>
-                    </thead>
 
-                    <tbody id="body">
+                        <tbody id="body">
 
-                    </tbody>
+                        </tbody>
 
-                </table>
-                <!-- end of truck's list table -->
+                    </table>
+                <!-- </div> -->
             </div>
         </div>
         <!-- end of truck's list divition -->
@@ -155,7 +156,8 @@
                     <div>
 
                         <label>Registration</label>
-                        <input type="text" id="registration_number" class="divition" placeholder="Registration Number" required>
+                        <input type="text" id="registration_number" class="divition" placeholder="Registration Number"
+                            required>
                     </div>
 
                     <!-- <button class="button" type="submit">Submit</button> -->
@@ -170,12 +172,15 @@
                     <ion-icon name="add-outline"></ion-icon>
                 </span>
                 <ul>
+                    <!-- <li onclick="add(), vehiclerefresh()"> -->
                     <li onclick="add()">
                         <ion-icon name="add-outline" id="add_icon"></ion-icon>
                     </li>
+                    <!-- <li onclick="update(), vehiclerefresh()"> -->
                     <li onclick="update()">
                         <ion-icon name="cloud-upload-outline" id="update_icon"></ion-icon>
                     </li>
+                    <!-- <li onclick="delet(), vehiclerefresh()"> -->
                     <li onclick="delet()">
                         <ion-icon name="trash-outline" id="delete_icon"></ion-icon>
                     </li>

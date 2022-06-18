@@ -88,12 +88,12 @@
       "status": "Not Available"
     },
     {
-      "id": 12,
-      "model": "Ashok Leyland Ecomet 1615 HE Truck",
-      "company": "Ashok Leyland Ecomet 1615 HE Truck",
+      "model": "Ashok Leyland Ecomet 16115 HE",
+      "company": "Ashok Leyland",
       "capacity": "378 tons",
-      "registration_number": 2376879878,
-      "status": "Available"
+      "registration_number": "2376879878",
+      "status": "Available",
+      "id": 12
     },
     {
       "id": 13,
@@ -146,14 +146,13 @@
       "status": "ontrip"
     },
     {
-      "id": 7,
       "name": "Bipin Pan",
-      "address": "medinipur",
-      "phone": 8763709767,
-      "pin_code": 741278,
-      "licence_no": 4784674,
-      "picture": "/resources/driver7.jpg",
-      "status": "ontrip"
+      "address": "Medinipur",
+      "phone": "8763709767",
+      "pin_code": "741278",
+      "licence_no": "4784675",
+      "status": "ontrip",
+      "id": 7
     },
     {
       "id": 8,

@@ -1,8 +1,5 @@
 
 
-
-
-
 // data fetch for driver list table
 fetch("http://localhost:3000/driver")
 .then((res) => res.json())
@@ -14,9 +11,7 @@ fetch("http://localhost:3000/driver")
         $("#body").append(`
 
             <tr id=${user.id} onclick="driver_details(${user.id})">
-                <td>
-                    <div class="imgBx"><img src="${user.picture}"></div>
-                </td>
+                
                 <td>
                     ${user.name}
                 </td>
@@ -39,8 +34,6 @@ function driver_details(x){
         console.log(data)
 
         let json = data;
-
-        let driver_picture = json.picture;
         let driver_id = json.id;
         let driver_name = json.name;
         let driver_address = json.address;
@@ -49,7 +42,6 @@ function driver_details(x){
         let driver_licence_number = json.licence_no;
         let status = json.status;
 
-        document.getElementById("driver_profile_picture").innerHTML = driver_picture;
         document.getElementById("driver_id").value = driver_id;
         document.getElementById("name").value = driver_name;
         document.getElementById("address").value = driver_address;
@@ -63,6 +55,10 @@ function driver_details(x){
 }
 
 
+// // Refresh-section
+// function driverrefresh() {
+//     $('#driver_refresh-section').load(location.href + " #driver_refresh-section");
+// };
 
 
 
@@ -102,12 +98,12 @@ function add() {
             console.log("Successfully");
             console.log(request.response);
 
-            document.getElementById("popup-1").classList.toggle("active");
+            // document.getElementById("popup-1").classList.toggle("active");
         }
         else {
             console.log("Wrong URL!");
 
-            document.getElementById("popup-2").classList.toggle("active");
+            // document.getElementById("popup-2").classList.toggle("active");
         }
     }
 
@@ -147,12 +143,12 @@ function update(){
             console.log("Successfully");
             console.log(request.response);
 
-            document.getElementById("popup-3").classList.toggle("active");
+            // document.getElementById("popup-3").classList.toggle("active");
         }
         else {
             console.log("Wrong URL!");
 
-            document.getElementById("popup-4").classList.toggle("active");
+            // document.getElementById("popup-4").classList.toggle("active");
         }
     }
 
@@ -178,12 +174,12 @@ function delet(){
             console.log("Item Deleted");
             console.log(request.response);
 
-            document.getElementById("popup-5").classList.toggle("active");
+            // document.getElementById("popup-5").classList.toggle("active");
         }
         else {
             console.log("Wrong URL!");
 
-            document.getElementById("popup-6").classList.toggle("active");
+            // document.getElementById("popup-6").classList.toggle("active");
         }
     }
 

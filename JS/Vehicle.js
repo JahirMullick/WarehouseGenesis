@@ -56,7 +56,10 @@ function truck_details(x){
 }
 
 
-
+// // Refresh-section
+// function vehiclerefresh() {
+//     $('#vehicle_refresh-section').load(location.href + " #vehicle_refresh-section");
+// };
 
 
 

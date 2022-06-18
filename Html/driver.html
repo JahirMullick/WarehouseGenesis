@@ -27,26 +27,28 @@
                 <h2>driver's list</h2>
 
             </div>
-            <div class="username_driver">
-                <!-- end of driver's list title divition -->
-                <div class="table_header">
-                    <div class="table_head_name">Name</div>
-                    <div class="table_head_status">Status</div>
+            <!-- <div id="driver_refresh-section"> -->
+                <div class="username_driver">
+                    <!-- end of driver's list title divition -->
+                    <div class="table_header">
+                        <div class="table_head_name">Name</div>
+                        <div class="table_head_status">Status</div>
+                    </div>
+
+
+                    <!-- create a table for driver's list -->
+                    <div id="table_table">
+                        <table class="tbody" id="driver-list-table">
+
+                            <tbody id="body">
+
+                            </tbody>
+
+                        </table>
+                    </div>
+                    <!-- end of driver's list table -->
                 </div>
-
-
-                <!-- create a table for driver's list -->
-                <div id="table_table">
-                    <table class="tbody" id="driver-list-table">
-
-                        <tbody id="body">
-
-                        </tbody>
-
-                    </table>
-                </div>
-                <!-- end of driver's list table -->
-            </div>
+            <!-- </div> -->
         </div>
         <!-- end of driver's list divition -->
 
@@ -177,12 +179,15 @@
                     <ion-icon name="add-outline"></ion-icon>
                 </span>
                 <ul>
+                    <!-- <li onclick="add(), driverrefresh()"> -->
                     <li onclick="add()">
                         <ion-icon name="add-outline" id="add_icon"></ion-icon>
                     </li>
+                    <!-- <li onclick="update(), driverrefresh()"> -->
                     <li onclick="update()">
                         <ion-icon name="cloud-upload-outline" id="update_icon"></ion-icon>
                     </li>
+                    <!-- <li onclick="delet(), driverrefresh()"> -->
                     <li onclick="delet()">
                         <ion-icon name="trash-outline" id="delete_icon"></ion-icon>
                     </li>
@@ -191,7 +196,7 @@
             <!-- end of driver add, update, delete divition -->
 
 
-            <div class="popup" id="popup-1">
+            <!-- <div class="popup" id="popup-1">
                 <div class="overlay"></div>
                 <div class="content">
                     <div class="close-btn" onclick="add()">&times;</div>
@@ -237,7 +242,7 @@
                     <div class="close-btn" onclick="delet()">&times;</div>
                     <h1>delete not successfuly</h1>
                 </div>
-            </div>
+            </div> -->
             <!-- end of popup window -->
 
         </div>
