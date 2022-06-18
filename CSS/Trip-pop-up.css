@@ -75,8 +75,11 @@
   padding: 10px 20px 10px 20px;
   margin-bottom: 35px;
   border-radius: 25px;
+  overflow: hidden;
+  overflow-y: scroll;
   box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #cbced1;
 }
+
 
 .table-contain {
   padding: 15px 1px 1px 2px;

@@ -295,6 +295,16 @@
       "time": "72 hr",
       "status": "OnTrip",
       "id": 3
+    },
+    {
+      "source": "kolkata",
+      "destination": "Mumbai",
+      "goods_weight": 95,
+      "driver_name": "Akash Sing",
+      "truck_model": "Tata Motors",
+      "time": "3 Days",
+      "status": "OnTrip",
+      "id": 4
     }
   ]
 }
