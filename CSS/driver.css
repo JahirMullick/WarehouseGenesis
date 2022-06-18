@@ -41,55 +41,6 @@ body {
     left: 80px;
 }
 
-
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Ubuntu', sans-serif;
-}
-
-:root {
-    --blue: #287bff;
-    --white: #fff;
-    --grey: #f5f5f5;
-    --black1: #222;
-    --black2: #999;
-    --sky: #0AA1DD;
-    --purple: #4D4C7D;
-}
-
-body {
-    min-height: 100vh;
-    overflow-x: hidden;
-}
-
-.container {
-    position: relative;
-    width: 100%;
-}
-
-.main {
-    position: absolute;
-    width: calc(100% - 300px);
-    left: 300px;
-    min-height: 100vh;
-    background: var(--white);
-    transition: 0.5s;
-}
-
-.main.active {
-    width: calc(100% - 80px);
-    left: 80px;
-}
-
-
-
-
-
-
 .details {
     position: relative;
     width: 100%;
@@ -175,44 +126,68 @@ body {
     height: 85vh;
 }
 
+/* .details .username {
+    margin-top: -31px;
+    padding: 10px 20px;
+    height: 420px;
+    margin-bottom: 35px;
+    border-radius: 25px;
+    box-shadow: rgb(203 206 209) 8px 8px 8px inset, rgb(203 206 209) -8px -8px 8px inset;
+} */
+
+.username_driver{
+    margin-top: 10px;
+    padding-top: 15px;
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 441px;
+    border-radius: 25px;
+    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #cbced1;
+}
+
 /* driver list name hedding design */
 .table_head_name{
-    padding-left: 31%;
+    padding-left: 13%;
     width: 50%;
+    font-size: 19px;
+    font-weight: 600;
     float: left;
-    color: var(--blue)
+    color: var(--blue);
 }
 
 /* driver list status hedding design */
 .table_head_status{
     float: right;
+    font-size: 19px;
+    font-weight: 600;
     width: 50%;
     padding-left: 25%;
     color: var(--blue);
 }
 
 /* image divition design for driver list */
-.imgBx {
+/* .imgBx {
     position: relative;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     overflow: hidden;
-}
+} */
 
 /* image design for driver list */
-.imgBx img {
+/* .imgBx img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
+} */
 
 /* table body design for driver list */
 .tbody {
-    width: 100%;
+    width: 99%;
+    margin-left: 49px;
     border-collapse: collapse;
     margin-top: 10px;
 }
@@ -241,10 +216,13 @@ body {
     color: var(--white);
 }
 
+
+
 /* add scroll for driver list */
-#table_table{
+#table_table {
+    margin-left: -8px;
     overflow: hidden;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
 }
 
 /* Now make it responsive design */
@@ -382,7 +360,7 @@ body {
 }
 
 .divition{
-    padding: 30px;
+    padding: 29px;
 }
 /* .divition{
     margin-top: -13px;
@@ -394,9 +372,18 @@ body {
     background-color: #0AA1DD;
     padding-top: 0%;
 } */
-.output{
+/* .output{
     height: 40px;
     font-size: large;
+} */
+
+.output {
+    margin: 11px 0px 12px 0px;
+    margin-top: 1px;
+    width: 98%;
+    padding: 8px;
+    border-radius: 10px;
+    border: 1px solid gray;
 }
 
 /* .output{
@@ -416,21 +403,20 @@ body {
     width: 100%;
 } */
 
-.driver_details_divition{
-    padding-top: 20px;
-}
-/* .driver_details_divition_driver .driver_details_divition{
+.driver_details_divition {
     position: absolute;
-    top: 52%;
-    left: 70%;
+    top: 54%;
+    margin-top: 57px;
+    left: 50%;
     transform: translate(-50%, -50%);
-    height: 400px;
-    width: 400px;
-    text-align: center;
-    padding-top: 90px;
-} */
+    height: 437px;
+    width: 502px;
+    box-shadow: 0px 0px 2px #5f5f5f, 0px 0px 0px 5px #ecf0f3, 8px 8px 15px #a7aaaf, -8px -8px 15px #fff;
+    border-radius: 6%;
+    overflow: hidden;
+}
 
-.driver_logo_divition{
+/* .driver_logo_divition{
     position: relative;
     width: 100px;
     height: 100px;
@@ -439,8 +425,8 @@ body {
     left: 52%;
     box-shadow: 0px 0px 2px #5f5f5f, 0px 0px 0px 5px #f5f5f9,
      8px 8px 15px #a7aaaf, -8px -8px 15px rgb(248, 248, 251);
-}
-
+} */
+/* 
 .driver_logo_divition img{
     position: absolute;
     top: 0;
@@ -448,7 +434,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
+} */
 
 
 
