@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="/CSS/vehicle.css">
     <link rel="stylesheet" href="/CSS/trip.css">
+    <link rel="stylesheet" href="/CSS/Trip-pop-up.css">
     <title>Trip</title>
 </head>
 
@@ -104,13 +105,13 @@
 
                         <label>Driver</label>
                         <input type="text" id="adriver" class="divitio" placeholder="Driver" required="" style="
-    margin-left: 44px;">
+    margin-left: 44px;"><a href="#" id="button_driver" class="button">Add</a>
                     </div>
                     <div>
 
                         <label>Vehicle</label>
                         <input type="text" id="avehicle" class="divitio" placeholder="Vehicle" required="" style="
-    margin-left: 35px;">
+    margin-left: 35px;"><a href="#" id="button_truck" class="button">Add</a>
                     </div>
                     <div>
 
@@ -121,7 +122,8 @@
                     <div>
 
                         <label>Status</label>
-                        <input type="text" id="registration_number" class="divitio" placeholder="Status" required="" style="
+                        <input type="text" id="registration_number" class="divitio" placeholder="Status" required=""
+                            style="
     margin-left: 43px;">
                     </div>
 
@@ -150,6 +152,89 @@
             </div>
             <!-- end of truck add, update, delete divition -->
 
+
+            <!-- Pop-Up Section -->
+
+            <!-- Driver Section -->
+
+            <div class="popup-section">
+                <div class="modal-contents">
+                    <div class="dclose">+</div>
+                    <div class="abcdxyz">
+                        <div class="driver-details">
+                            <div class="table-contain">
+                                <div class="popUp_table">
+
+                                    <div class="popUp_thead">
+
+                                        <div class="popUp_tr">
+
+                                            <div class="first_head">Name</div>
+
+
+                                            <div class="second_head">Status</div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="popUp_tbody">
+
+                                        <div class="popUp_tr">
+
+                                            <div class="first_body">Driver Name</div>
+
+
+                                            <div class="second_body">Driver Status</div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Truck Section -->
+
+            <div class="truck_popup_section">
+                <div class="modal-contents">
+
+                    <div class="tclose">+</div>
+                    <div class="abcdxyz">
+                        <div class="truck-details">
+                            <div class="table-contain">
+                                <div class="popUp_table">
+                                    <div class="popUp_thead">
+                                        <div class="popUp_tr">
+                                            <div class="first_head">Model</div>
+
+                                            <div class="tsecond_head">Status</div>
+
+                                        </div>
+                                    </div>
+                                    <div class="popUp_tbody">
+                                        <div class="popUp_tr">
+                                            <div class="first_body">Truck</div>
+
+
+                                            <div class="second_body">Truck</div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
         </div>
         <!-- end of main truck detail's divition -->
 
@@ -157,6 +242,7 @@
     <!-- end of truck's list and detail's divition -->
 
     <script src="/JS/trip.js"></script>
+    <script src="/JS/Trip-pop-up.js"></script>
 </body>
 
 </html>

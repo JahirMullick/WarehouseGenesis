@@ -49,6 +49,23 @@ form .divitio {
     margin-left: 21px;
 }
 
+.button {
+    background-color: #1686d9;
+    border: 2px solid white;
+    border-radius: 30px;
+    text-decoration: none;
+    padding: 6px 13px;
+    color: white;
+    margin-top: 10px;
+    display: inline-block;
+  }
+  
+  .button:hover {
+    background-color: white;
+    color: #1686d9;
+    border: 2px solid #1686d9;
+  }
+
   
 form label{
     color: #1686d9;

@@ -8,7 +8,8 @@
   align-items: center;
 }
 
-.button {
+.truck_button,
+.driver_button {
   background-color: #1686d9;
   border: 2px solid white;
   border-radius: 30px;
@@ -19,13 +20,14 @@
   display: inline-block;
 }
 
-.button:hover {
+.truck_button:hover,
+.driver_button:hover {
   background-color: white;
   color: #1686d9;
   border: 2px solid #1686d9;
 }
 
-
+.truck_popup_section,
 .popup-section {
   background-color: rgba(0, 0, 0, 0.8);
   width: 100%;
@@ -38,8 +40,8 @@
 }
 
 .modal-contents {
-  height: 500px;
-  width: 1100px;
+  height: 429px;
+  width: 460px;
   background-color: white;
   text-align: center;
   padding: 20px;
@@ -47,65 +49,79 @@
   border-radius: 10px;
 }
 
-.abcdxyz{
+
+.abcdxyz {
   position: absolute;
-  
+
 }
+
 .driver-details {
   position: absolute;
-  height: 218px;
-  width: 522px;
-  margin-top: 270px;
+  height: 367px;
+  width: 426px;
+  margin-top: 33px;
   padding: 10px 20px 10px 20px;
-  margin-bottom: 35px;
+  margin-left: -1px;
+  overflow: scroll;
   border-radius: 25px;
   box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #cbced1;
 }
+
 .truck-details {
   position: absolute;
-  height: 218px;
-  width: 522px;
-  margin-top: 9px;
+  height: 376px;
+  width: 424px;
+  margin-top: 18px;
   padding: 10px 20px 10px 20px;
   margin-bottom: 35px;
   border-radius: 25px;
   box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #cbced1;
 }
 
-.table-contain{
+.table-contain {
   padding: 15px 1px 1px 2px;
 }
 
-.table-contain table thead{
+.table-contain .popUp_table .popUp_thead {
   font-size: 18px;
   font-weight: 600;
   color: #1686d9;
 }
-.table-contain table tbody{
-  font-size: 18px;
+
+.table-contain .popUp_table .popUp_tbody {
+  font-size: 16px;
   padding-top: 8px;
 }
 
-.table-contain table tr .second{
-  margin-left: 251px;
+.table-contain .popUp_table .popUp_tr .second_body {
+  margin-left: 286px;
+  margin-top: 22px;
   position: absolute;
 }
-.modal-contents form {
+.table-contain .popUp_table .popUp_tr .second_head {
+  margin-left: 308px;
+  font-size: 19px;
   position: absolute;
-  width: 500px;
-  margin-top: 63px;
-  margin-left: 605px;
 }
-input {
-  margin: 15px auto;
-  display: block;
-  width: 50%;
-  padding: 8px;
-  border-radius: 10px;
-  border: 1px solid gray;
+.table-contain .popUp_table .popUp_tr .tsecond_head {
+  margin-left: 282px;
+  font-size: 19px;
+  position: absolute;
+}
+.table-contain .popUp_table .popUp_tr .first_head {
+  margin-left: 4px;
+  font-size: 19px;
+  position: absolute;
+}
+.table-contain .popUp_table .popUp_tr .first_body{
+  margin-left: 4px;
+  margin-top: 22px;
+  position: absolute;
 }
 
-.close {
+
+.tclose,
+.dclose {
   position: absolute;
   top: 0;
   right: 10px;
@@ -115,6 +131,7 @@ input {
   cursor: pointer;
 }
 
-.close:hover {
+.tclose:hover,
+.dclose:hover {
   color: #666;
 }
