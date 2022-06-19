@@ -168,6 +168,12 @@ body {
 .details .recentOrders table tr td {
     padding: 10px;
 }
+.details .recentOrders table tr .dashTableHeader{
+    padding: 10px;
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--blue);
+}
 
 .details .recentOrders table tr td:last-child {
     text-align: end;
