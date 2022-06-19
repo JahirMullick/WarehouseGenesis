@@ -93,7 +93,7 @@
 
 .table-contain .popUp_table .popUp_tbody {
   font-size: 16px;
-  padding-top: 8px;
+  padding-top: 12px;
 }
 
 .table-contain .popUp_table .popUp_tr .second_body {
@@ -112,12 +112,12 @@
   position: absolute;
 }
 .table-contain .popUp_table .popUp_tr .first_head {
-  margin-left: 4px;
+  margin-left: 62px;
   font-size: 19px;
   position: absolute;
 }
 .table-contain .popUp_table .popUp_tr .first_body{
-  margin-left: 4px;
+  margin-left: 72px;
   margin-top: 22px;
   position: absolute;
 }
