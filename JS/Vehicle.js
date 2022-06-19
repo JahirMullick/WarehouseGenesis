@@ -1,8 +1,5 @@
 
 
-
-
-
 // data fetch for truck list table
 fetch("http://localhost:3000/vehicles")
 .then((res) => res.json())
@@ -33,22 +30,21 @@ function truck_details(x){
     fetch("http://localhost:3000/vehicles/"+ x)
     .then((res) => res.json())
     .then((data) => {
-        console.log(data)
 
         let json = data;
 
-        // let truck_picture = json.picture;
         let truck_id = json.id;
         let truck_model = json.model;
         let truck_company = json.company;
+        let truck_status = json.status;
         let truck_capacity = json.capacity;
         let truck_registration_number = json.registration_number;
 
-        // document.getElementById("src").value = truck_picture;
         document.getElementById("truck_id").value = truck_id;
         document.getElementById("model").value = truck_model;
         document.getElementById("company").value = truck_company;
         document.getElementById("capacity").value = truck_capacity;
+        document.getElementById("vehicle_status").value = truck_status;
         document.getElementById("registration_number").value = truck_registration_number;
         
     });

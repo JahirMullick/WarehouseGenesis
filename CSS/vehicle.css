@@ -49,10 +49,8 @@ body {
     width: 100%;
     padding: 20px;
     display: grid; 
-    grid-template-columns: 1.5fr 1.5fr;
+    grid-template-columns: 1.3fr 1.7fr;
     grid-gap: 30px;
-    /* grid-template-columns: 2fr 1fr; */
-    
 }
 
 .details .recentOrders {
@@ -90,9 +88,6 @@ body {
 
 
 .truck_list .username {
-    /* margin-top: -31px;
-    padding: 10px 20px;
-    height: 500px; */
     margin-top: 5px;
     padding: 10px 20px;
     height: 420px;
@@ -113,33 +108,6 @@ body {
 }
 
 
-/* .online {
-    padding: 2px 4px;
-    background: #8de02c;
-    color: var(--white);
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: 500;
-}
-
-.active {
-    padding: 2px 4px;
-    background: #f9ca3f;
-    color: var(--white);
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: 500;
-}
-
-.ofline {
-    padding: 2px 4px;
-    background: #f00;
-    color: var(--white);
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: 500;
-} */
-
 
 /* driver list divition design */
 .truck_list {
@@ -153,52 +121,7 @@ body {
     width: 100%;
     height: 85vh;
 }
-.truck_list1 {
-    position: relative;
-    display: grid;
-    min-height: 500px;
-    padding: 20px;
-    background: var(--white);
-    box-shadow: 0 7px 25px #d9d9d9;
-    border-radius: 20px;
-    width: 100%;
-    height: 85vh;
-}
 
-/* driver list name hedding design */
-.table_head_name{
-    padding-left: 31%;
-    width: 50%;
-    float: left;
-    color: var(--blue)
-}
-
-/* driver list status hedding design */
-.table_head_status{
-    float: right;
-    width: 50%;
-    padding-left: 25%;
-    color: var(--blue);
-}
-
-/* image divition design for driver list */
-.imgBx {
-    position: relative;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-/* image design for driver list */
-.imgBx img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 
 /* table body design for driver list */
 .tbody {
@@ -231,11 +154,6 @@ body {
     color: var(--white);
 }
 
-/* add scroll for driver list */
-#table_table{
-    overflow: hidden;
-    overflow-y: scroll;
-}
 
 /* Now make it responsive design */
 @media (max-width: 991px) {
@@ -314,7 +232,7 @@ body {
 .truck_details_divition_truck form {
     position: absolute;
     width: 469px;
-    height: 376px;
+    height: 355px;
     margin-top: 32px;
     margin-left: 48px;
 }
@@ -334,111 +252,29 @@ form .divition {
     border: 1px solid gray;
 }
 
-.table_head{
-    float: left;
-    width: 33.3%;
-}
-
 
 /* add style for form */
 
 .truck_details_divition_truck{
-    /* position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 500px;
-    width: 400px;
-    
-    box-shadow: 0px 0px 2px #5f5f5f, 0px 0px 0px 5px #ecf0f3,
-     8px 8px 15px #a7aaaf, -8px -8px 15px #fff;
-    border-radius: 10%;
-    overflow: hidden; */
-
     position: absolute;
-    top: 54%;
+    top: 53%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 433px;
-    width: 420px;
+    height: 400px;
+    width: 481px;
     box-shadow: 0px 0px 2px #5f5f5f, 0px 0px 0px 5px #ecf0f3, 8px 8px 15px #a7aaaf, -8px -8px 15px #fff;
     border-radius: 10%;
     overflow: hidden;
     
 }
 
-.truck_details_divition_truck img{
+.recentOrders .truck_details_divition_truck form .vehicleInputLabel{
     position: absolute;
-    top: 0%;
-    left: 0%;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 10%;
+    padding-top: 5px;
 }
 
-/* .divition{
-    margin-top: -13px;
-    margin-bottom: 10px;
-    width: 60%;
-    align-items: center;
-    padding: 5px;
-    opacity: 0.8;
-} */
-.output{
-    height: 50px;
-    width: 100%;
-    background: none;
-    font-size: larger;
-    background: #fff;
-    border: none;
-    border-radius: 10%;
-}
-
-.truck_logo_logo{
-    position: absolute;
-    top: 30px;
-    height: auto;
-    width: 100%;
-}
-
-.truck_details_divition_truck .truck_details_divition{
-    /* position: absolute;
-    top: 52%;
-    left: 70%;
-    transform: translate(-50%, -50%);
-    height: 400px;
-    width: 400px;
-    text-align: center;
-    padding-top: 90px; */
-    position: absolute;
-    top: 42%;
-    left: 55%;
-    transform: translate(-50%, -50%);
-    height: 400px;
-    width: 400px;
-    text-align: center;
-    padding-top: 90px;
-}
-
-.truck_logo_divition{
-    position: relative;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    overflow: hidden;
-    left: 38%;
-    box-shadow: 0px 0px 2px #5f5f5f, 0px 0px 0px 5px #f5f5f9,
-     8px 8px 15px #a7aaaf, -8px -8px 15px rgb(248, 248, 251);
-}
-
-.truck_logo_divition img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.recentOrders .truck_details_divition_truck form .vehicleInputArea{
+    margin-left: 108px;
 }
 
 
