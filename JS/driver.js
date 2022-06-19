@@ -31,7 +31,6 @@ function driver_details(x){
     fetch("http://localhost:3000/driver/"+ x)
     .then((res) => res.json())
     .then((data) => {
-        console.log(data)
 
         let json = data;
         let driver_id = json.id;
