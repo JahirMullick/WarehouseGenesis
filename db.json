@@ -277,13 +277,11 @@
       "id": 2,
       "source": "Panskura",
       "destination": "Dellhi",
-      "distance": "200 km",
       "time": "72 hr",
       "driver_name": "Bikash Ojha",
       "truck_model": "Force Motors",
-      "truck_regno": 216821,
       "goods_weight": 39,
-      "status": "Available"
+      "status": "In Progress"
     },
     {
       "source": "Kolkata",
