@@ -29,7 +29,7 @@ fetch("http://localhost:3000/driver?status=active")
         data.forEach((user) => {
             $("#pop_Up_tr").append(`
 
-            <tr id=${user.id} onclick="truck_details(${user.id})">
+            <tr id=${user.id} onclick="driver_details(${user.id})">
                 <td>
                     ${user.name}
                 </td>
@@ -43,12 +43,13 @@ fetch("http://localhost:3000/driver?status=active")
         });
     })
 
-function tdriver_details(td) {
-    fetch("http://localhost:3000/driver/" + td)
+function driver_details(x) {
+    fetch("http://localhost:3000/driver/" + x)
         .then((res) => res.json())
-        .then((tddata) => {
+        .then((data) => {
 
-            let json = tddata;
+            let json = data;
+            console.log(data);
 
             let driver_name = json.name;
 
@@ -67,7 +68,7 @@ fetch("http://localhost:3000/vehicles?status=Available")
         data.forEach((user) => {
             $("#pop_up_tt").append(`
 
-            <tr id=${user.id} onclick="truck_details(${user.id})">
+            <tr id=${user.id} onclick="vehicles_details(${user.id})">
                 <td>
                     ${user.model}
                 </td>
@@ -82,11 +83,11 @@ fetch("http://localhost:3000/vehicles?status=Available")
     })
 
 
-function tvehicles_details(tv) {
+function vehicles_details(tv) {
     fetch("http://localhost:3000/vehicles/" + tv)
         .then((res) => res.json())
-        .then((tvdata) => {
-            let json = tvdata;
+        .then((data) => {
+            let json = data;
             let truck_model = json.model;
             document.getElementById("avehicle").value = truck_model;
         });
