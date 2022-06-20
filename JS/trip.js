@@ -1,16 +1,16 @@
 
 
-// data fetch for truck list table
+// data fetch for trip list table
 fetch("http://localhost:3000/trips")
-.then((res) => res.json())
-.then((data) => {
-    console.log(data)
+    .then((res) => res.json())
+    .then((data) => {
+        // console.log(data)
 
-    // onclick="truck_details()"
-    data.forEach((user) => {
-        $("#body").append(`
+        // onclick="truck_details()"
+        data.forEach((user) => {
+            $("#body").append(`
 
-            <tr id=${user.id} onclick="truck_details(${user.id})">
+            <tr id=${user.id} onclick="trip_details(${user.id})">
                 <td>
                     ${user.source}
                 </td>
@@ -25,45 +25,45 @@ fetch("http://localhost:3000/trips")
 
         
         `)
-        
-    });
-})
 
-function truck_details(x){
-    fetch("http://localhost:3000/trips/"+ x)
-    .then((res) => res.json())
-    .then((data) => {
-        console.log(data)
+        });
+    })
 
-        let json = data;
+function trip_details(x) {
+    fetch("http://localhost:3000/trips/" + x)
+        .then((res) => res.json())
+        .then((data) => {
+            console.log(data)
 
-        
-        let trip_id = json.id;
-        let trip_source = json.source;
-        let trip_destination = json.destination;
-        let trip_weight = json.goods_weight;
-        let trip_time = json.time;
-        let trip_driver = json.driver_name;
-        let trip_truck = json.truck_model;
-        let trip_status = json.status;
+            let json = data;
 
-        
-        document.getElementById("trip_id").value = trip_id;
-        document.getElementById("truck_id").value = trip_source;
-        document.getElementById("model").value = trip_destination;
-        document.getElementById("company").value = trip_weight;
-        document.getElementById("capacity").value = trip_time;
-        document.getElementById("registration_number").value = trip_status;
-        driver = document.getElementById('adriver').value = trip_driver;
-        vehicle = document.getElementById('avehicle').value = trip_truck;
-        
-    });
-    
+
+            let trip_id = json.id;
+            let trip_source = json.source;
+            let trip_destination = json.destination;
+            let trip_weight = json.goods_weight;
+            let trip_time = json.time;
+            let trip_driver = json.driver_name;
+            let trip_truck = json.truck_model;
+            let trip_status = json.status;
+
+
+            document.getElementById("trip_id").value = trip_id;
+            document.getElementById("truck_id").value = trip_source;
+            document.getElementById("model").value = trip_destination;
+            document.getElementById("company").value = trip_weight;
+            document.getElementById("capacity").value = trip_time;
+            document.getElementById("registration_number").value = trip_status;
+            driver = document.getElementById('adriver').value = trip_driver;
+            vehicle = document.getElementById('avehicle').value = trip_truck;
+
+        });
+
 }
 
 
 
-function actionToggle(){
+function actionToggle() {
     var action = document.querySelector('.actiono');
     action.classList.toggle('active')
 
@@ -79,7 +79,6 @@ function actionToggle(){
 
 }
 
-
 // truck add function
 function add() {
     const request = new XMLHttpRequest();
@@ -91,7 +90,7 @@ function add() {
     var driver = document.getElementById('adriver').value;
     var vehicle = document.getElementById('avehicle').value;
 
-    let data = '{"source":"'+ source +'","destination": "'+ destination +'","goods_weight": '+ distance +',"driver_name":"'+ driver +'","truck_model":"'+ vehicle +'", "time": "'+ ex_Time +'","status": "'+ status +'"}';
+    let data = '{"source":"' + source + '","destination": "' + destination + '","goods_weight": ' + distance + ',"driver_name":"' + driver + '","truck_model":"' + vehicle + '", "time": "' + ex_Time + '","status": "' + status + '"}';
     request.open("POST", "http://localhost:3000/trips/");
     request.setRequestHeader('Content-Type', 'application/json')
     request.send(data);
@@ -115,14 +114,13 @@ function add() {
     document.getElementById("registration_number").readOnly = true;
     document.getElementById('adriver').readOnly = true;
     document.getElementById('avehicle').readOnly = true;
-    
 }
 
 
 
 // truck update function
 
-function update(){
+function update() {
     const request = new XMLHttpRequest();
 
     var source = document.getElementById('truck_id').value;
@@ -134,7 +132,7 @@ function update(){
     var ex_Time = document.getElementById('capacity').value;
     var status = document.getElementById('registration_number').value;
 
-    let data = '{"source":"'+ source +'","destination": "'+ destination +'","goods_weight": '+ distance +',"driver_name":"'+ driver +'","truck_model":"'+ vehicle +'", "time": "'+ ex_Time +'","status": "'+ status +'"}';
+    let data = '{"source":"' + source + '","destination": "' + destination + '","goods_weight": ' + distance + ',"driver_name":"' + driver + '","truck_model":"' + vehicle + '", "time": "' + ex_Time + '","status": "' + status + '"}';
 
     request.open("Put", "http://localhost:3000/trips/" + trip_id);
     request.setRequestHeader('Content-Type', 'application/json')
@@ -163,7 +161,7 @@ function update(){
 
 
 // truck delete function
-function delet(){
+function delet() {
     const request = new XMLHttpRequest();
     let deleteId = (document.getElementById('trip_id').value);
     request.open("DELETE", ("http://localhost:3000/trips/" + deleteId));

@@ -54,8 +54,27 @@ function driver_details(x) {
             let driver_name = json.name;
 
             document.getElementById("adriver").value = driver_name;
+
+
         });
 }
+
+// const request = new XMLHttpRequest();
+
+// var status = document.getElementById('adriver').value;
+// let request_data = '{"status":"' + status + '"}'
+// request.open('"PATCH", "http://localhost:3000/vehicles/' + x + '"')
+// request.setRequestHeader('Content-Type', 'application/json')
+// request.send(request_data);
+
+// request.onload = function () {
+//     if (request.status == 200) {
+//         console.log("Successfully Update status");
+//     }
+//     else {
+//         console.log("Wrong URL!");
+//     }
+// }
 
 
 

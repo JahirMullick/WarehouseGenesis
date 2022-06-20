@@ -112,7 +112,6 @@
       "phone": 8763763337,
       "pin_code": 748333,
       "licence_no": 478389,
-      "picture": "/resources/driver3.jpeg",
       "status": "active"
     },
     {
@@ -122,7 +121,6 @@
       "phone": 8762163767,
       "pin_code": 218378,
       "licence_no": 4782189,
-      "picture": "/resources/driver4.jpg",
       "status": "active"
     },
     {
@@ -132,7 +130,6 @@
       "phone": 8763761167,
       "pin_code": 748118,
       "licence_no": 4114389,
-      "picture": "/resources/driver5.jpg",
       "status": "inactive"
     },
     {
@@ -142,7 +139,6 @@
       "phone": 8763763017,
       "pin_code": 748309,
       "licence_no": 4786789,
-      "picture": "/resources/driver6.png",
       "status": "ontrip"
     },
     {
@@ -161,7 +157,6 @@
       "phone": 8763678967,
       "pin_code": 741238,
       "licence_no": 4904389,
-      "picture": "/resources/driver8.jpg",
       "status": "active"
     },
     {
@@ -171,7 +166,6 @@
       "phone": 8763757667,
       "pin_code": 748789,
       "licence_no": 4784689,
-      "picture": "/resources/driver9.jpg",
       "status": "inactive"
     },
     {
@@ -181,7 +175,6 @@
       "phone": 8763765667,
       "pin_code": 746778,
       "licence_no": 4984389,
-      "picture": "/resources/driver10.jpg",
       "status": "inactive"
     },
     {
@@ -191,7 +184,6 @@
       "phone": 8763763780,
       "pin_code": 721152,
       "licence_no": 4756389,
-      "picture": "/resources/driver11.jpg",
       "status": "active"
     },
     {
@@ -201,7 +193,6 @@
       "phone": 8763767351,
       "pin_code": 721232,
       "licence_no": 47637389,
-      "picture": "/resources/driver12.jpg",
       "status": "ontrip"
     },
     {
@@ -211,7 +202,6 @@
       "phone": 8763763872,
       "pin_code": 727890,
       "licence_no": 4712389,
-      "picture": "/resources/driver13.jpg",
       "status": "inactive"
     },
     {
@@ -221,7 +211,6 @@
       "phone": 8763378767,
       "pin_code": 748987,
       "licence_no": 4784439,
-      "picture": "/resources/driver14.jpg",
       "status": "active"
     },
     {
@@ -231,7 +220,6 @@
       "phone": 8763378767,
       "pin_code": 748987,
       "licence_no": 4784439,
-      "picture": "/resources/driver14.jpg",
       "status": "active"
     },
     {
@@ -302,6 +290,16 @@
       "time": "3 Days",
       "status": "OnTrip",
       "id": 4
+    },
+    {
+      "source": "India",
+      "destination": "Dubai",
+      "goods_weight": 432,
+      "driver_name": "Akash Sing",
+      "truck_model": "Mahindra & Mahindra",
+      "time": "5 Days",
+      "status": "OnTrip",
+      "id": 5
     }
   ]
 }
