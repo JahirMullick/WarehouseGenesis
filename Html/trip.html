@@ -93,7 +93,7 @@
                     <div>
 
                         <label>Vehicle</label>
-                        <input type="text" id="avehicle" class="divitio" placeholder="Vehicle" required="" style="
+                        <input type="text" id="vehicle_name" class="divitio" placeholder="Vehicle" required="" style="
     margin-left: 35px;"><a href="#" id="button_truck" class="button" onclick = "tvehicles_details()">Add</a>
                     </div>
                     <div>
@@ -105,7 +105,23 @@
                     <div>
 
                         <label>Status</label>
-                        <input type="text" id="registration_number" class="divitio" placeholder="Status" required=""
+                        <input type="text" id="trip_status" class="divitio" placeholder="Status" required=""
+                            style="
+    margin-left: 43px;">
+                    </div>
+            
+                    <div style="display: none;">
+
+                        <label>Driver Id</label>
+                        <input type="text" id="driver_id" class="divitio" placeholder="Driver Id"
+                            style="
+    margin-left: 43px;">
+                    </div>
+            
+                    <div style="display: none;">
+
+                        <label>Vehicle Id</label>
+                        <input type="text" id="vehicle_id" class="divitio" placeholder="Vehicle Id"
                             style="
     margin-left: 43px;">
                     </div>
@@ -121,7 +137,7 @@
                     <ion-icon name="add-outline"></ion-icon>
                 </span>
                 <ul>
-                    <li onclick="add()">
+                    <li id="addButtonid" onclick="add()">
                         <ion-icon name="add-outline" id="add_icon"></ion-icon>
                     </li>
                     <li onclick="update()">
