@@ -138,8 +138,7 @@ body {
 .username_driver{
     margin-top: 10px;
     padding-top: 15px;
-    overflow: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
     height: 441px;
     border-radius: 25px;
     box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #cbced1;

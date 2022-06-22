@@ -91,6 +91,7 @@ body {
     margin-top: 5px;
     padding: 10px 20px;
     height: 420px;
+    overflow-y: auto;
     margin-bottom: 10px;
     border-radius: 25px;
     box-shadow: rgb(203 206 209) 8px 8px 8px inset, rgb(203 206 209) -8px -8px 8px inset;
@@ -102,10 +103,9 @@ body {
     margin-top: 10px;
 }
 
-.username{
-    overflow: hidden;
-    overflow-y: scroll;
-}
+/* .username{
+    overflow-y: auto;
+} */
 
 
 

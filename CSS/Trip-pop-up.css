@@ -62,7 +62,7 @@
   margin-top: 33px;
   padding: 10px 20px 10px 20px;
   margin-left: -1px;
-  overflow: scroll;
+  overflow-y: auto;
   border-radius: 25px;
   box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #cbced1;
 }
@@ -75,8 +75,7 @@
   padding: 10px 20px 10px 20px;
   margin-bottom: 35px;
   border-radius: 25px;
-  overflow: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
   box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #cbced1;
 }
 
