@@ -4,7 +4,6 @@
 fetch("http://localhost:3000/vehicles")
 .then((res) => res.json())
 .then((data) => {
-    console.log(data)
 
     // onclick="truck_details()"
     data.forEach((user) => {
@@ -88,7 +87,6 @@ function add() {
     request.onload = function () {
         if (request.status == 201) {
             console.log("Successfully");
-            console.log(request.response);
         }
         else {
             console.log("Wrong URL!");
@@ -127,7 +125,6 @@ function update(){
     request.onload = function () {
         if (request.status == 200) {
             console.log("Successfully");
-            console.log(request.response);
         }
         else {
             console.log("Wrong URL!");
@@ -154,7 +151,6 @@ function delet(){
     request.onload = function () {
         if (request.status == 200) {
             console.log("Item Deleted");
-            console.log(request.response);
         }
         else {
             console.log("Wrong URL!");

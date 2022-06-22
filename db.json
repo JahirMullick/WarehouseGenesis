@@ -12,7 +12,7 @@
       "company": "ALLCARGO LOGISTICS LTD",
       "capacity": "111 tons",
       "registration_number": "7484737238",
-      "status": "Available",
+      "status": "OnTrip",
       "id": 1
     },
     {
@@ -37,7 +37,7 @@
       "company": "ASIS LOGISTICS LIMITED",
       "capacity": "250 tons",
       "registration_number": 80906545,
-      "status": "OnTrip"
+      "status": "Available"
     },
     {
       "id": 5,
@@ -45,7 +45,7 @@
       "company": "AUTORIDERS INTERNATIONAL LTD",
       "capacity": "310 tons",
       "registration_number": 879088775,
-      "status": "Not Available"
+      "status": "Available"
     },
     {
       "id": 6,
@@ -53,15 +53,15 @@
       "company": "BLUE DART EXPRESS LTD",
       "capacity": "230 tons",
       "registration_number": 909845564,
-      "status": "OnTrip"
+      "status": "Available"
     },
     {
       "id": 7,
-      "model": "Force Motors",
+      "model": "Force Motors 2",
       "company": "Containerway international Ltd",
       "capacity": "400 tons",
       "registration_number": 74834789,
-      "status": "OnTrip"
+      "status": "Available"
     },
     {
       "id": 8,
@@ -85,7 +85,7 @@
       "company": "ELBEE SERVICES LTD",
       "capacity": "470 tons",
       "registration_number": 68780243,
-      "status": "Not Available"
+      "status": "Available"
     },
     {
       "model": "Ashok Leyland Ecomet 16115 HE",
@@ -97,11 +97,11 @@
     },
     {
       "id": 13,
-      "model": "Mahindra Boloero Pikup 4*4 Pickup",
+      "model": "Mahindra Boloero",
       "company": "GATEWAY DISTRIPARKS LTD",
       "capacity": "500 tons",
       "registration_number": 1356789,
-      "status": "OnTrip"
+      "status": "Available"
     }
   ],
   "driver": [
@@ -112,7 +112,7 @@
       "phone": 8763763337,
       "pin_code": 748333,
       "licence_no": 478389,
-      "status": "active"
+      "status": "OnTrip"
     },
     {
       "id": 4,
@@ -139,7 +139,7 @@
       "phone": 8763763017,
       "pin_code": 748309,
       "licence_no": 4786789,
-      "status": "ontrip"
+      "status": "active"
     },
     {
       "name": "Bipin Pan",
@@ -147,7 +147,7 @@
       "phone": "8763709767",
       "pin_code": "741278",
       "licence_no": "4784675",
-      "status": "ontrip",
+      "status": "OnTrip",
       "id": 7
     },
     {
@@ -193,7 +193,7 @@
       "phone": 8763767351,
       "pin_code": 721232,
       "licence_no": 47637389,
-      "status": "ontrip"
+      "status": "active"
     },
     {
       "id": 13,
@@ -206,7 +206,7 @@
     },
     {
       "id": 14,
-      "name": "Sibsonkar Ojha",
+      "name": "Sibsonkar Maity",
       "address": "Dille",
       "phone": 8763378767,
       "pin_code": 748987,
@@ -215,7 +215,7 @@
     },
     {
       "id": 15,
-      "name": "Sibsonkar Ojha",
+      "name": "Sibsonkar Pandit",
       "address": "Dille",
       "phone": 8763378767,
       "pin_code": 748987,
@@ -223,16 +223,7 @@
       "status": "active"
     },
     {
-      "id": 16,
-      "name": "Kitkat",
-      "address": "Dille",
-      "phone": 8763378767,
-      "pin_code": 748987,
-      "licence_no": 4784439,
-      "status": "active"
-    },
-    {
-      "name": "Bikash Ojha",
+      "name": "Bikash Pahan",
       "address": "bagnan",
       "phone": "8763763337",
       "pin_code": "748356",
@@ -241,8 +232,8 @@
       "id": 17
     },
     {
-      "name": "Bika",
-      "address": "bag",
+      "name": "Tonmoy Maity",
+      "address": "Panskura",
       "phone": "876376",
       "pin_code": "7483",
       "licence_no": "4783",
@@ -252,54 +243,28 @@
   ],
   "trips": [
     {
-      "source": "Panskura",
-      "destination": "Kolkata",
-      "goods_weight": 50,
-      "driver_name": "Balak",
-      "truck_model": "Force Motors",
-      "time": "72 hr",
-      "status": "Delivered",
+      "source": "p",
+      "destination": "k",
+      "goods_weight": 20,
+      "driver_name": "Bikash Ojha",
+      "driver_id": 3,
+      "truck_model": "Tata Motors",
+      "vehicle_id": 1,
+      "time": "1 hr",
+      "status": "OnTrip",
       "id": 1
     },
     {
-      "id": 2,
       "source": "Panskura",
-      "destination": "Dellhi",
-      "time": "72 hr",
-      "driver_name": "Bikash Ojha",
-      "truck_model": "Force Motors",
-      "goods_weight": 39,
-      "status": "In Progress"
-    },
-    {
-      "source": "Kolkata",
-      "destination": "USA",
-      "goods_weight": 320,
-      "driver_name": "Bikash Ojha",
-      "truck_model": "Force Motors",
-      "time": "72 hr",
+      "destination": "Kolkata",
+      "goods_weight": 400,
+      "driver_name": "Bipin Pan",
+      "driver_id": 7,
+      "truck_model": "Ashok Leyland",
+      "vehicle_id": 2,
+      "time": "3 hr",
       "status": "OnTrip",
-      "id": 3
-    },
-    {
-      "source": "kolkata",
-      "destination": "Mumbai",
-      "goods_weight": 95,
-      "driver_name": "Akash Sing",
-      "truck_model": "Tata Motors",
-      "time": "3 Days",
-      "status": "OnTrip",
-      "id": 4
-    },
-    {
-      "source": "India",
-      "destination": "Dubai",
-      "goods_weight": 432,
-      "driver_name": "Akash Sing",
-      "truck_model": "Mahindra & Mahindra",
-      "time": "5 Days",
-      "status": "OnTrip",
-      "id": 5
+      "id": 2
     }
   ]
 }
