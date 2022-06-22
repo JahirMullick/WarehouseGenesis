@@ -4,7 +4,6 @@
 fetch("http://localhost:3000/trips")
     .then((res) => res.json())
     .then((data) => {
-        // console.log(data)
 
         // onclick="truck_details()"
         data.forEach((user) => {
@@ -33,7 +32,6 @@ function trip_details(x) {
     fetch("http://localhost:3000/trips/" + x)
         .then((res) => res.json())
         .then((data) => {
-            console.log(data)
 
             let json = data;
 
@@ -53,7 +51,7 @@ function trip_details(x) {
             document.getElementById("model").value = trip_destination;
             document.getElementById("company").value = trip_weight;
             document.getElementById("capacity").value = trip_time;
-            document.getElementById("registration_number").value = trip_status;
+            document.getElementById("trip_status").value = trip_status;
             driver = document.getElementById('adriver').value = trip_driver;
             vehicle = document.getElementById('avehicle').value = trip_truck;
 
@@ -73,24 +71,26 @@ function actionToggle() {
     document.getElementById("model").readOnly = false;
     document.getElementById("company").readOnly = false;
     document.getElementById("capacity").readOnly = false;
-    document.getElementById("registration_number").readOnly = false;
+    document.getElementById("trip_status").readOnly = false;
     document.getElementById('adriver').readOnly = false;
     document.getElementById('avehicle').readOnly = false;
 
 }
 
-// truck add function
+// trip add function
 function add() {
     const request = new XMLHttpRequest();
     var source = document.getElementById('truck_id').value;
     var destination = document.getElementById('model').value;
     var distance = document.getElementById('company').value;
     var ex_Time = document.getElementById('capacity').value;
-    var status = document.getElementById('registration_number').value;
+    var status = document.getElementById('trip_status').value;
     var driver = document.getElementById('adriver').value;
-    var vehicle = document.getElementById('avehicle').value;
+    var vehicle = document.getElementById('vehicle_name').value;
+    var vehicleId = document.getElementById('vehicle_id').value;
+    var driverId = document.getElementById('driver_id').value;
 
-    let data = '{"source":"' + source + '","destination": "' + destination + '","goods_weight": ' + distance + ',"driver_name":"' + driver + '","truck_model":"' + vehicle + '", "time": "' + ex_Time + '","status": "' + status + '"}';
+    let data = '{"source":"' + source + '","destination": "' + destination + '","goods_weight": ' + distance + ',"driver_name":"' + driver + '","driver_id":' + driverId + ',"truck_model":"' + vehicle + '","vehicle_id":' + vehicleId + ',"time": "' + ex_Time + '","status": "' + status + '"}';
     request.open("POST", "http://localhost:3000/trips/");
     request.setRequestHeader('Content-Type', 'application/json')
     request.send(data);
@@ -98,7 +98,6 @@ function add() {
     request.onload = function () {
         if (request.status == 201) {
             console.log("Successfully");
-            console.log(request.response);
         }
         else {
             console.log("Wrong URL!");
@@ -111,11 +110,34 @@ function add() {
     document.getElementById("model").readOnly = true;
     document.getElementById("company").readOnly = true;
     document.getElementById("capacity").readOnly = true;
-    document.getElementById("registration_number").readOnly = true;
+    document.getElementById("trip_status").readOnly = true;
     document.getElementById('adriver').readOnly = true;
     document.getElementById('avehicle').readOnly = true;
 }
 
+
+document.getElementById('addButtonid').addEventListener("click", function () {
+    const request = new XMLHttpRequest();
+    var driverId = document.getElementById('driver_id').value;
+    var status = document.getElementById('trip_status').value;
+    let request_data = '{"status": "'+ status +'"}';
+    request.open("PATCH", "http://localhost:3000/driver/" + driverId);
+    request.setRequestHeader('Content-Type', 'application/json');
+    request.send(request_data);
+});
+// function driverStatus() {
+    
+// }
+
+document.getElementById('addButtonid').addEventListener("click", function ()  {
+    const request = new XMLHttpRequest();
+    var vehicleId = document.getElementById('vehicle_id').value;
+    var status = document.getElementById('trip_status').value;
+    let request_data = '{"status": "'+ status +'"}';
+    request.open("PATCH", "http://localhost:3000/vehicles/" + vehicleId);
+    request.setRequestHeader('Content-Type', 'application/json');
+    request.send(request_data);
+});
 
 
 // truck update function
@@ -130,9 +152,11 @@ function update() {
     var driver = document.getElementById('adriver').value;
     var vehicle = document.getElementById('avehicle').value;
     var ex_Time = document.getElementById('capacity').value;
-    var status = document.getElementById('registration_number').value;
+    var status = document.getElementById('trip_status').value;
+    var vehicleId = document.getElementById('vehicle_id').value;
+    var driverId = document.getElementById('driver_id').value;
 
-    let data = '{"source":"' + source + '","destination": "' + destination + '","goods_weight": ' + distance + ',"driver_name":"' + driver + '","truck_model":"' + vehicle + '", "time": "' + ex_Time + '","status": "' + status + '"}';
+    let data = '{"source":"' + source + '","destination": "' + destination + '","goods_weight": ' + distance + ',"driver_name":"' + driver + '","driver_id":' + driverId + ',"truck_model":"' + vehicle + '", "vehicle_id":' + vehicleId + ', "time": "' + ex_Time + '","status": "' + status + '"}';
 
     request.open("Put", "http://localhost:3000/trips/" + trip_id);
     request.setRequestHeader('Content-Type', 'application/json')
@@ -141,7 +165,6 @@ function update() {
     request.onload = function () {
         if (request.status == 200) {
             console.log("Successfully");
-            console.log(request.response);
         }
         else {
             console.log("Wrong URL!");
@@ -154,7 +177,7 @@ function update() {
     document.getElementById("model").readOnly = true;
     document.getElementById("company").readOnly = true;
     document.getElementById("capacity").readOnly = true;
-    document.getElementById("registration_number").readOnly = true;
+    document.getElementById("trip_status").readOnly = true;
     document.getElementById('adriver').readOnly = true;
     document.getElementById('avehicle').readOnly = true;
 }
@@ -170,7 +193,6 @@ function delet() {
     request.onload = function () {
         if (request.status == 200) {
             console.log("Item Deleted");
-            console.log(request.response);
         }
         else {
             console.log("Wrong URL!");
@@ -183,7 +205,7 @@ function delet() {
     document.getElementById("model").readOnly = true;
     document.getElementById("company").readOnly = true;
     document.getElementById("capacity").readOnly = true;
-    document.getElementById("registration_number").readOnly = true;
+    document.getElementById("trip_status").readOnly = true;
     document.getElementById('adriver').readOnly = true;
     document.getElementById('avehicle').readOnly = true;
 }
