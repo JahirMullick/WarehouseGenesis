@@ -77,9 +77,10 @@ function add() {
     var model = document.getElementById('model').value;
     var company = document.getElementById('company').value;
     var capacity = document.getElementById('capacity').value;
+    var truck_status = document.getElementById("vehicle_status").value;
     var registration_number = document.getElementById('registration_number').value;
 
-    let data = '{"model": "'+ model +'","company": "'+ company +'", "capacity": "'+ capacity +'","registration_number": "'+ registration_number +'"}';
+    let data = '{"model": "'+ model +'","company": "'+ company +'", "capacity": "'+ capacity +'","registration_number": "'+ registration_number +'","status":"'+ truck_status +'"}';
     request.open("POST", "http://localhost:3000/vehicles/");
     request.setRequestHeader('Content-Type', 'application/json')
     request.send(data);
@@ -94,12 +95,12 @@ function add() {
     }
 
     // teXt area are editable to readonly
-    // document.getElementById("driver_id").readOnly = true;
-    // document.getElementById("name").readOnly = true;
-    // document.getElementById("address").readOnly = true;
-    // document.getElementById("phone_number").readOnly = true;
-    // document.getElementById("pincode").readOnly = true;
-    // document.getElementById("licence_number").readOnly = true;
+    document.getElementById("driver_id").readOnly = true;
+    document.getElementById("name").readOnly = true;
+    document.getElementById("address").readOnly = true;
+    document.getElementById("phone_number").readOnly = true;
+    document.getElementById("pincode").readOnly = true;
+    document.getElementById("licence_number").readOnly = true;
     
 }
 
@@ -115,8 +116,9 @@ function update(){
     var truck_capacity = (document.getElementById('capacity').value);
     var truck_registration_number = (document.getElementById('registration_number').value);
     var truck_id = (document.getElementById('truck_id').value);
+    var truck_status = document.getElementById("vehicle_status").value;
 
-    let data = '{"model": "'+ truck_model +'","company": "'+ truck_company +'", "capacity": "'+ truck_capacity +'","registration_number": "'+ truck_registration_number +'"}';
+    let data = '{"model": "'+ truck_model +'","company": "'+ truck_company +'", "capacity": "'+ truck_capacity +'","registration_number": "'+ truck_registration_number +'","status":"'+ truck_status +'"}';
 
     request.open("Put", "http://localhost:3000/vehicles/" + truck_id);
     request.setRequestHeader('Content-Type', 'application/json')
@@ -132,12 +134,12 @@ function update(){
     }
 
     // teXt area are editable to readonly
-    // document.getElementById("driver_id").readOnly = true;
-    // document.getElementById("name").readOnly = true;
-    // document.getElementById("address").readOnly = true;
-    // document.getElementById("phone_number").readOnly = true;
-    // document.getElementById("pincode").readOnly = true;
-    // document.getElementById("licence_number").readOnly = true;
+    document.getElementById("driver_id").readOnly = true;
+    document.getElementById("name").readOnly = true;
+    document.getElementById("address").readOnly = true;
+    document.getElementById("phone_number").readOnly = true;
+    document.getElementById("pincode").readOnly = true;
+    document.getElementById("licence_number").readOnly = true;
 }
 
 
@@ -158,11 +160,11 @@ function delet(){
     }
 
     // teXt area are editable to readonly
-    // document.getElementById("driver_id").readOnly = true;
-    // document.getElementById("name").readOnly = true;
-    // document.getElementById("address").readOnly = true;
-    // document.getElementById("phone_number").readOnly = true;
-    // document.getElementById("pincode").readOnly = true;
-    // document.getElementById("licence_number").readOnly = true;
+    document.getElementById("driver_id").readOnly = true;
+    document.getElementById("name").readOnly = true;
+    document.getElementById("address").readOnly = true;
+    document.getElementById("phone_number").readOnly = true;
+    document.getElementById("pincode").readOnly = true;
+    document.getElementById("licence_number").readOnly = true;
 }
 

@@ -102,6 +102,14 @@
       "capacity": "500 tons",
       "registration_number": 1356789,
       "status": "Available"
+    },
+    {
+      "model": "Tata Motors 3",
+      "company": "Tata",
+      "capacity": "500",
+      "registration_number": "251203690",
+      "status": "Available",
+      "id": 14
     }
   ],
   "driver": [
