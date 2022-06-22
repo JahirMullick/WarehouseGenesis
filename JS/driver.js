@@ -4,7 +4,6 @@
 fetch("http://localhost:3000/driver")
 .then((res) => res.json())
 .then((data) => {
-    console.log(data)
 
     // onclick="driver_details()"
     data.forEach((user) => {
@@ -95,7 +94,6 @@ function add() {
     request.onload = function () {
         if (request.status == 201) {
             console.log("Successfully");
-            console.log(request.response);
 
             // document.getElementById("popup-1").classList.toggle("active");
         }
@@ -140,8 +138,6 @@ function update(){
     request.onload = function () {
         if (request.status == 200) {
             console.log("Successfully");
-            console.log(request.response);
-
             // document.getElementById("popup-3").classList.toggle("active");
         }
         else {
@@ -171,7 +167,6 @@ function delet(){
     request.onload = function () {
         if (request.status == 200) {
             console.log("Item Deleted");
-            console.log(request.response);
 
             // document.getElementById("popup-5").classList.toggle("active");
         }

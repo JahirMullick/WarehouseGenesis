@@ -9,7 +9,6 @@ import users from '../db.json' assert {type: 'json'};
 
 // Store total numbers of object in driver_count variable.
 let driver_count = Object.keys(users.driver).length;
-// console.log(driver_count);
 //Select the div that class name que_driver
 const que_Drivertext = document.querySelector(".que_Driver");
 // Write a format in between store the driver_count value. Mean total driver
@@ -25,7 +24,6 @@ que_Drivertext.innerHTML = que_Drivertag;
 //     return resp.json();
 // })
 // .then(function(data) {// This line store the data Object in data variable.
-//     console.log(data);
 //     // Store total numbers of object in driver_count variable.
 //     let driver_count = Object.keys(data).length;
 //     //Select the div that class name que_driver
@@ -40,9 +38,9 @@ que_Drivertext.innerHTML = que_Drivertag;
 // Total Goods weight Count Start here ---------->
 
 
-const abcd = users.trips;
-var res = abcd.map(bill => bill.goods_weight).reduce((acc, amount) => acc + amount);
-console.log('This is res = ',res);
+const totalWeight = users.trips;
+var res = totalWeight.map(bill => bill.goods_weight).reduce((acc, amount) => acc + amount);
+
 
 const que_Goodstext = document.querySelector(".que_goods");
 let que_Goodstag = '<div class="numbers" id="d_No"><span>' + res + '</span></div>';   
@@ -74,7 +72,6 @@ que_Triptext.innerHTML = que_Triptag;
 //     return resp.json();
 // })
 // .then(function(data) { // This line store the data Object in data variable.
-//     console.log(data);
 //     // Store total numbers of object in trip_count variable.
 //     let trip_count = Object.keys(data).length;
 //     //Select the div that class name que_trip
@@ -105,7 +102,6 @@ que_vehiclestext.innerHTML = que_Vehiclestag;
 //     return resp.json();
 // })
 // .then(function(data) {// This line store the data Object in data variable.
-//     console.log(data);
 //     // Store total numbers of object in vehicles_count variable.
 //     let vehicles_count = Object.keys(data).length;
 //     //Select the div that class name que_vehicles
@@ -124,7 +120,6 @@ que_vehiclestext.innerHTML = que_Vehiclestag;
 fetch("http://localhost:3000/trips")
     .then((res) => res.json())
     .then((data) => {
-        console.log(data)
 
         data.forEach((user) => {
             $("#body").append(`

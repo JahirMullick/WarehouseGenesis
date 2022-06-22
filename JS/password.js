@@ -89,7 +89,6 @@ function trigger() {
 function checkPassword() {
 	let password = document.getElementById("password").value;
 	let confirmpassword = document.getElementById("confirm").value;
-	console.log(password, confirmpassword);
 	let message = document.getElementById("message");
 
 	if (password.length != 0) {
@@ -120,7 +119,6 @@ function Get_Request() {
 
 	request.onload = function () {
 		if (request.response != "[]") {
-			console.log(request.response);
 			Put_Request();
 			function Put_Request() {
 
@@ -140,7 +138,7 @@ function Get_Request() {
 						console.log("Wrong URL!");
 					}
 				}
-				console.log(loginUserid);
+		
 			}
 
 		}

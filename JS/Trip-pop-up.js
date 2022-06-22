@@ -49,32 +49,15 @@ function driver_details(x) {
         .then((data) => {
 
             let json = data;
-            console.log(data);
 
             let driver_name = json.name;
+            let driver_id = json.id;
 
             document.getElementById("adriver").value = driver_name;
-
-
+            document.getElementById("driver_id").value = driver_id;
+            document.querySelector('.popup-section').style.display = "none";
         });
 }
-
-// const request = new XMLHttpRequest();
-
-// var status = document.getElementById('adriver').value;
-// let request_data = '{"status":"' + status + '"}'
-// request.open('"PATCH", "http://localhost:3000/vehicles/' + x + '"')
-// request.setRequestHeader('Content-Type', 'application/json')
-// request.send(request_data);
-
-// request.onload = function () {
-//     if (request.status == 200) {
-//         console.log("Successfully Update status");
-//     }
-//     else {
-//         console.log("Wrong URL!");
-//     }
-// }
 
 
 
@@ -108,6 +91,9 @@ function vehicles_details(tv) {
         .then((data) => {
             let json = data;
             let truck_model = json.model;
-            document.getElementById("avehicle").value = truck_model;
+            let vehicle_id = json.id;
+            document.getElementById("vehicle_name").value = truck_model;
+            document.getElementById("vehicle_id").value = vehicle_id;
+            document.querySelector('.truck_popup_section').style.display = "none";
         });
 }
