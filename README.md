@@ -20,3 +20,7 @@ and what they can do and what not are described in the dataflow diagram in detai
 To login as admin just append /admin to the home url and use   
 #### username: admin ####
 #### password: admin ####
+
+### Preview Project Images
+
+![pika-1667487801518-1x](https://user-images.githubusercontent.com/60438343/200002801-8eb7ea5f-4ff8-4ae6-8ae1-16321564355c.png)
