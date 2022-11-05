@@ -10,8 +10,8 @@ as well as managing shipping and monitoring the movement of goods.
 
 
 ## How to use
-After starting the JSON server just open the application and follow the menus and head
-to registration link from the login menu. This is used for tracking trips.
+To start the project first open terminal and start the json server by this command "json-server --watch db.json --port 8000". 
+After starting the JSON server just open the application.
 
 After account creation / registration we can directly login by going to the login menu
 using the same credentials provided at the time of registration. The scope of every type of user
@@ -23,4 +23,7 @@ To login as admin just append /admin to the home url and use
 
 ### Preview Project Images
 
+#### Login Page ####
 ![pika-1667487801518-1x](https://user-images.githubusercontent.com/60438343/200002801-8eb7ea5f-4ff8-4ae6-8ae1-16321564355c.png)
+
+#### Dashboard ####
