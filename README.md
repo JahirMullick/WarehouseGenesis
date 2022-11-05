@@ -27,5 +27,7 @@ To login as admin just append /admin to the home url and use
 ![pika-1667487801518-1x](https://user-images.githubusercontent.com/60438343/200002801-8eb7ea5f-4ff8-4ae6-8ae1-16321564355c.png)
 
 #### Dashboard --> ####
-<> (![pika-1667622519495-1x](https://user-images.githubusercontent.com/60438343/200101279-8f4bf50d-3c77-4278-9bc2-eb0a527aab6f.png))
+<!---
+![pika-1667622519495-1x](https://user-images.githubusercontent.com/60438343/200101279-8f4bf50d-3c77-4278-9bc2-eb0a527aab6f.png)
+--->
 ![pika-1667623106979-1x](https://user-images.githubusercontent.com/60438343/200101353-b3053441-ec7b-4b50-836b-593495e15bdc.png)
